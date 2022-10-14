@@ -127,6 +127,10 @@ a {
 .actions-nav {
     margin-left: 16px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 140px);
 }
 
 .btn {
