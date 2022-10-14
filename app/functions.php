@@ -20,8 +20,6 @@ function is_user_authenticated() {
 function ensure_user_is_authenticated() {
     if (!is_user_authenticated()) {
       redirect('login.php');
-    } else {
-        redirect('welcome.php');
     }
 }
 
