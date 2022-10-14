@@ -28,6 +28,11 @@ header {
     justify-content: space-between;
 }
 
+.first-part-header {
+    display: flex;
+    flex-direction: row;
+}
+
 .logo-img {
     height: 40px;
     border-right-color: #151D3B;
@@ -40,10 +45,9 @@ header {
 .name {
     height: 40px;
     display: flex;
-    width: 900px;
     align-items: center;
     padding-left: 20px;
-    width: 1280px;
+    width: 800px;
 }
 
 h2 {

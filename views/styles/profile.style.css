@@ -8,7 +8,7 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #BDF2D5;
+    background-color: #E7E7E7;
 }
 
 * {
@@ -91,12 +91,12 @@ h3 {
 
 
 section {
-    background-color: #BDF2D5;
+    background-color: #E7E7E7;
     flex-grow: 28;
 }
 
 nav {
-    background-color: #BDF2D5;
+    background-color: #E7E7E7;
     border-right-style: solid;
     border-right-color: #151D3B;
     border-right-width: 1px;
@@ -212,7 +212,7 @@ p {
 }
 
 .btn-cancel {
-    background-color: #BDF2D5;
+    background-color: #E7E7E7;
     width: 156px;
     height: 52px;
     font-size: 20px;
