@@ -24,7 +24,13 @@ header {
     padding: 0;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color:#151D3B
+    border-bottom-color:#151D3B;
+    justify-content: space-between;
+}
+
+.first-part-header {
+    display: flex;
+    flex-direction: row;
 }
 
 .logo-img {
@@ -39,15 +45,25 @@ header {
 .name {
     height: 40px;
     display: flex;
-    width: 900px;
     align-items: center;
     padding-left: 20px;
+    width: 800px;
 }
 
 h2 {
     font-size: 30px;
     font-family: 'Nunito';
     letter-spacing: 2px;
+}
+
+.actions-header {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-right: 40px;
 }
 
 h3 {
@@ -73,15 +89,6 @@ h3 {
     margin-left: 30px
 }
 
-.actions-header {
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    margin-right: 40px;
-}
 
 .row-sided {
   display: flex;

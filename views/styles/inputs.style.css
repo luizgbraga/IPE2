@@ -28,6 +28,11 @@ header {
     justify-content: space-between;
 }
 
+.first-part-header {
+    display: flex;
+    flex-direction: row;
+}
+
 .logo-img {
     height: 40px;
     border-right-color: #151D3B;
@@ -40,20 +45,15 @@ header {
 .name {
     height: 40px;
     display: flex;
-    width: 900px;
     align-items: center;
     padding-left: 20px;
-    width: 1280px;
+    width: 800px;
 }
 
 h2 {
     font-size: 30px;
     font-family: 'Nunito';
     letter-spacing: 2px;
-}
-
-.title {
-    margin-left: 30px
 }
 
 .actions-header {
@@ -65,6 +65,11 @@ h2 {
     width: 300px;
     margin-right: 40px;
 }
+
+.title {
+    margin-left: 30px
+}
+
 
 .row-sided {
   display: flex;

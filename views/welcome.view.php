@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-
-    <head>
+  <head>
         <title>Home</title>
         <meta charset="utf-8">
         <style>

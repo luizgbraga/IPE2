@@ -14,10 +14,12 @@
     <body>
 
         <header>
+          <div class='first-part-header'>
             <div class='logo-img'></div>
             <div class='name'>
-              <h2>Bem vindo, <?php echo $_SESSION["nome"]; ?></h2>
+              <h2>Bem vindo, <?php echo $_SESSION["sigla"]; ?></h2>
             </div>
+          </div>
             <div class="actions-header">
                 <a href='mensagens.php'><img src='assets/bell.png' width="26" height="26"></a>
                 <a href=''><img src='assets/question.png' width="26" height="26"></a>
