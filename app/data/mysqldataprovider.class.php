@@ -44,10 +44,16 @@ class MySqlDataProvider extends DataProvider {
         return $oms;
     }
 
-    // atualiza um usuário com dados secundários de efetivo
+    // atualiza um usuário com dados secundários (efetivo, metragem, demanda, modalidade)
     public function update_user($id, $efetivo, $metragem, $demanda, $modalidade) {
         $this->execute(
-            'UPDATE users SET efetivo = :efetivo, metragem = :metragem, demanda = :demanda, modalidade = :modalidade WHERE id = :id',
+            'UPDATE users SET 
+            efetivo = :efetivo, 
+            metragem = :metragem, 
+            demanda = :demanda, 
+            modalidade = :modalidade 
+            WHERE id = :id',
+
             [
                 ':id' => $id,
                 ':efetivo' => $efetivo,
@@ -167,6 +173,7 @@ class MySqlDataProvider extends DataProvider {
         $dados->demanda_medida = $demanda_medida;
         $dados->energia_reativa = $energia_reativa;
         $dados->energia_ativa = $energia_ativa;
+        
         $input = new Input();
         $input->id = $id;
         $input->data = $data;
