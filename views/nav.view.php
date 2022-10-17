@@ -1,67 +1,67 @@
 <nav>
 
-    <div class="actions-nav">
+    <div class="actions-nav column">
 
         <div>
 
-            <div class="item-nav <?php if($home_nav === true) {
-                echo 'nav-item';
+            <div class="nav-item row <?php if($home_nav === true) {
+                echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/home.png' width="20" height="20">
                 <a href='welcome.php'>
-                    <p class="action-nav">Início</p>
+                    <p class="action-nav-text">Início</p>
                 </a>
             </div>
 
-            <div class='item-nav'>
+            <div class='nav-item row'>
                 <img class='icon-nav' src='assets/add-input.png' width="20" height="20">
                 <a href='#' id='open-modal'>
-                    <p class="action-nav">Novo Input</p>
+                    <p class="action-nav-text">Novo Input</p>
                 </a>
             </div>
 
-            <div class="item-nav <?php if($mensagens_nav === true) {
-                echo 'nav-item';
+            <div class="nav-item row <?php if($mensagens_nav === true) {
+                echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/chat.png' width="20" height="20">
                 <a href='mensagens.php'>
-                    <p class="action-nav">Mensagens</p>
+                    <p class="action-nav-text">Mensagens</p>
                 </a>
             </div>
 
-            <div class="item-nav <?php if($adicionar_subordinado_nav === true) {
-                echo 'nav-item';
+            <div class="nav-item row <?php if($adicionar_subordinado_nav === true) {
+                echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/add-user.png' width="20" height="20">
                 <a href='acesslevel.php'>
-                    <p class="action-nav">Adicionar subordinado</p>
+                    <p class="action-nav-text">Adicionar subordinado</p>
                 </a>
             </div>
 
-            <div class="item-nav <?php if($subordinados_nav === true) {
-                echo 'nav-item';
+            <div class="nav-item row <?php if($subordinados_nav === true) {
+                echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/hierarchy.png' width="20" height="20">
                 <a href=''>
-                    <p class="action-nav">Subordinados</p>
+                    <p class="action-nav-text">Subordinados</p>
                 </a>
             </div>
 
-            <div class="item-nav <?php if($profile_nav === true) {
-                echo 'nav-item';
+            <div class="nav-item row <?php if($profile_nav === true) {
+                echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/user.png' width="20" height="20">
                 <a href='profile.php'>
-                    <p class="action-nav">Perfil</p>
+                    <p class="action-nav-text">Perfil</p>
                 </a>
             </div>
 
         </div>
 
-        <div class='item-nav settings'>
+        <div class='nav-item settings'>
             <img class='icon-nav' src='assets/setting.png' width="20" height="20">
             <a href=''>
-                <p class="action-nav">Configurações</p>
+                <p class="action-nav-text">Configurações</p>
             </a>
         </div>
 

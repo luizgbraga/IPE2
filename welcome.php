@@ -7,25 +7,17 @@ session_start();
 require_once("app/app.php");
  
 // verifique se está logado; senão, redirecione para o login
-ensure_user_is_authenticated();
 
-class Consumo {
-    public $data;
-    public $consumo; 
-} 
 
-class DemandaMedida {
-    public $data;
-    public $demanda_medida;
-}
+require('app/data/classes/charts.class.php');
 
 $user_inputs = (array) Data::get_inputs($_SESSION['id']);
 $subordinados = Data::get_subordinados($_SESSION['id']);
 
-$subordinados_inputs = [];
-
 $datas = [];
 $all_consumo = $all_demanda_medida = $all_energia_ativa = $all_energia_reativa = [];
+
+// USUÁRIO
 
 foreach($user_inputs as $input) {
     $datas = [...$datas, $input->data];
@@ -34,6 +26,10 @@ foreach($user_inputs as $input) {
     $all_energia_ativa = [...$all_energia_ativa, $input->dados->energia_ativa];
     $all_energia_reativa = [...$all_energia_reativa, $input->dados->energia_reativa];
 }
+
+// SUBORDINADOS
+
+$subordinados_inputs = [];
 
 foreach($subordinados as $subordinado) {
     $inputs = (array) Data::get_inputs($subordinado->id);

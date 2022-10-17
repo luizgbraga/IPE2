@@ -17,6 +17,7 @@ if(is_post()) {
     $metragem = trim($_POST['metragem']);
     $demanda = trim($_POST['demanda']);
     $modalidade = trim($_POST['modalidade']);
+    
     Data::update_user($_SESSION['id'], $efetivo, $metragem, $demanda, $modalidade);
 
 }
