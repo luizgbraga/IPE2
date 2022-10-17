@@ -24,9 +24,9 @@
 
     <?php include 'header.view.php'; ?>
 
-    <div class='row-sided'>
+    <div class='row-sided row'>
 
-    <?php $home_nav = false; $mensagens_nav = false; $adicionar_subordinado_nav = true; $profile_nav = false; ?>
+        <?php $home_nav = false; $mensagens_nav = false; $adicionar_subordinado_nav = true; $profile_nav = false; ?>
         <?php include 'nav.view.php'; ?>
 
         <div class='column content'>

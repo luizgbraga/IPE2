@@ -60,7 +60,7 @@
 
         <div class='nav-item row'>
             <img class='icon-nav' src='assets/setting.png' width="20" height="20">
-            <a href=''>
+            <a href='subordinados.php'>
                 <p class="action-nav-text">Configurações</p>
             </a>
         </div>
