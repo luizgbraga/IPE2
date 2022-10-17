@@ -20,7 +20,7 @@ $subordinados = Data::get_subordinados($_SESSION['id']);
 $subordinados_inputs = [];
 
 $datas = [];
-$consumo = [];
+$all_consumo = [];
 
 
 foreach($subordinados as $subordinado) {
@@ -30,14 +30,14 @@ foreach($subordinados as $subordinado) {
 
 foreach($user_inputs as $input) {
     $datas = [...$datas, $input->data];
-    $consumo = [...$consumo, $input->dados->consumo];
+    $all_consumo = [...$all_consumo, $input->dados->consumo];
 }
 
 $subordinados_consumo = [];
 foreach($subordinados_inputs as $input) {
     $consumo_sub = new Consumo();
-    $consumo_sub->data = $input->data;
-    $consumo_sub->consumo = $input->dados->consumo;
+    $consumo_sub->data = $input[0]->data;
+    $consumo_sub->consumo = $input[0]->dados->consumo;
     $subordinados_consumo = [...$subordinados_consumo, $consumo_sub];
 }
 

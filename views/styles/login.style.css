@@ -8,7 +8,11 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    background-color: #F6F6F6;
+    background-image: url('assets/loginIPE.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
   
 * {
@@ -27,14 +31,13 @@ body {
 }
 
 aside {
-    background-color: #F6F6F6;
-    flex-grow: 16
+    flex-grow: 16;
 }
 
 h2 {
     font-size: 52px;
     font-family: 'Nunito';
-    margin: 94px 0px 56px 108px;
+    margin: 68px 0px 56px 108px;
     letter-spacing: 2px;
 }
 

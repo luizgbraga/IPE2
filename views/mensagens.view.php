@@ -1,29 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+
+<html lang='pt-br'>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <meta charset='UTF-8'>
+    <title>Adicionar subordinados</title>
+
     <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        <?php include 'styles/welcome.style.css'; ?>
+        <?php include 'styles/modal.style.css'; ?>
+        <?php include 'styles/acesslevel.style.css'; ?>
     </style>
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
+
 </head>
+
 <body>
-    <div class="wrapper">
-        <h2>Suas mensagens</h2>
 
-        <?php
+    <?php include 'header.view.php'; ?>
 
-        foreach($mensagens as $item) {
-        $from = $item->from->id;
-        $name = $item->from->nome;
-        $sigla = $item->from->sigla;
+    <div class='row-sided'>
 
-            echo "<p>Mensagem de $name ($sigla) - <a href=accept.php?id=$id&from=$from>Aceitar</a></p>";
-        }
+        <?php include 'nav.view.php'; ?>
 
-        ?>
-    </div>
+        <div class='column content'>
+
+            <h2>Suas mensagens</h2>
+
+            <?php
+
+            foreach($mensagens as $item) {
+            $from = $item->from->id;
+            $name = $item->from->nome;
+            $sigla = $item->from->sigla;
+
+                echo "<p>Mensagem de $name ($sigla) - <a href=accept.php?id=$id&from=$from>Aceitar</a></p>";
+            }
+
+            ?>
+
+  <?php include 'modal.view.php'; ?>
+
+  </div>
+
+</div>
+
 </body>
+
+<script>
+    <?php include 'scripts/modal.js'; ?>
+  </script>
+
 </html>
