@@ -3,23 +3,27 @@
 <html lang='pt-br'>
 
     <head>
+
         <title>Faça seu Login</title>
         <meta charset='utf-8'>
+
         <style>
           <?php include 'styles/default.style.css'; ?>
           <?php include 'styles/login.style.css'; ?>
         </style>
+
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
+    
     </head>
 
     <body>
 
         <aside></aside>
 
-        <div id='island'>
-            <h2>Entrar</h2>
+        <div id='island' class='column'>
+            <h2 class='login-title'>Entrar</h2>
 
-            <div class='login-form'>
+            <div class='login-form row'>
 
                 <form action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method='post'>
 
@@ -45,7 +49,7 @@
 
                     <div class='row'>
                         <input type='checkbox' name='remember' class='checkbox'>
-                        <p>Lembrar de mim?</p>
+                        <p class='remember-me'>Lembrar de mim?</p>
                     </div>
 
                     <div>
@@ -55,7 +59,7 @@
                         </div>
                     </div>
 
-                    <p>Não tem uma conta? <a href='register.php'>Inscreva-se agora</a></p>
+                    <p class='does-not-have-account-text'>Não tem uma conta? <a class='goto' href='register.php'>Inscreva-se agora</a></p>
 
                 </form>
                 

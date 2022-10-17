@@ -58,7 +58,7 @@
 
         </div>
 
-        <div class='nav-item settings'>
+        <div class='nav-item row'>
             <img class='icon-nav' src='assets/setting.png' width="20" height="20">
             <a href=''>
                 <p class="action-nav-text">Configurações</p>

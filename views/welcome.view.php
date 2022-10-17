@@ -23,7 +23,7 @@
 
     <?php include 'header.view.php'; ?>
 
-    <div class="row-sided">
+    <div class="row-sided row">
 
       <?php $home_nav = true; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = false; ?>
       <?php include 'nav.view.php'; ?>
@@ -31,12 +31,12 @@
       <section class='row'>
 
         <div class="chart-test">
-          <h2 class='title-consumo'>Consumo</h2>
+          <h2 class='title-chart'>Consumo</h2>
           <canvas id="chart-consumo"></canvas>
         </div>
 
         <div class="chart-test">
-          <h2 class='title-consumo'>Demanda medida</h2>
+          <h2 class='title-chart'>Demanda medida</h2>
           <canvas id="chart-demanda-medida"></canvas>
         </div>
       </section>

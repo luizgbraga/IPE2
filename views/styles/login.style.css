@@ -7,16 +7,13 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
 }
 
 #island {
-    background-color: #F6F6F6;
     width: 400px;
     margin: 40px;
+    background-color: #F6F6F6;
     border-radius: 14px;
-    display: flex;
-    flex-direction: column;
     flex-grow: 5;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -25,85 +22,70 @@ aside {
     flex-grow: 16;
 }
 
-h2 {
+.login-title {
     font-size: 52px;
-    font-family: 'Nunito';
     margin: 68px 0px 56px 108px;
     letter-spacing: 2px;
 }
 
-a {
-    text-decoration: none;
+.goto {
     color: #151D3B
 }
 
-p {
+.does-not-have-account-text, .remember-me {
     font-size: 18px;
-    font-family: 'Nunito';
     margin-top: 6px
 }
-  
+
 .login-form {
-    display: flex;
-    flex-direction: row;
     margin-left: 108px;
 }
 
 .password-input {
-    margin-top: 16px;
-    margin-bottom: 4px
+    margin: 16px 0px 4px 0px;
 }
-  
+
 .writable-input {
-      height: 58px;
-      width: 388px;
-      margin-bottom: 2px;
-      padding: 18px;
-      font-size: 18px;
-      font-family: 'Nunito';
-      font-weight: 100;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
-      border: 0;
-      border-bottom: 1px solid #151D3B;
-      border-top: 1px solid #151D3B;
-      border-right: 1px solid #151D3B;
+    width: 388px;
+    height: 58px;
+    margin-bottom: 2px;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: 100;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 0;
+    border-bottom: 1px solid #151D3B;
+    border-top: 1px solid #151D3B;
+    border-right: 1px solid #151D3B;
 }
-  
+
 .btn {
-      width: 164px;
-      height: 54px;
-      background-color: #7AD9F5;
-      font-size: 22px;
-      font-family: 'Nunito';
-      border-radius: 8px;
-      border: 0;
-      margin-top: 42px;
-      cursor: pointer
+    width: 164px;
+    height: 54px;
+    background-color: #7AD9F5;
+    font-size: 22px;
+    border-radius: 8px;
+    border: 0;
+    margin-top: 42px;
+    cursor: pointer
 }
-  
+
 .checkbox {
     width: 18px;
     height: 18px;
     background-color: #7AD9F5;
     font-size: 20px;
-    font-family: 'Nunito';
     border-radius: 4px;
     border: 0;
-    margin-right: 8px;
-    margin-top: 8px;
+    margin: 8px 8px 0px 0px;
     accent-color: #151D3B;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
 .icon {
-    background-color: #7AD9F5;
     width: 60px;
     height: 58px;
+    background-color: #7AD9F5;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     display: flex;
@@ -116,13 +98,11 @@ p {
 
 .next {
     position: absolute;
-    margin-top: 57px;
-    margin-left: 122px;
+    margin: 57px 0px 0px 122px;
 }
 
 .invalid-feedback {
     font-size: 17px;
-    font-family: 'Nunito';
     color: #d9534f;
     margin-bottom: 4px;
     padding-left: 1px

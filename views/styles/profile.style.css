@@ -1,151 +1,69 @@
 h3 {
     font-size: 20px;
-    font-family: 'Nunito';
-    letter-spacing: 1px; 
-    margin: 0;
-    margin-bottom: 12px;
-    margin-right: 12px;
+    letter-spacing: 1px;
+    margin: 0px 12px 12px 0px;
 }
 
-.subtitle {
-    margin-left: 16px;
-    display: flex;
-    flex-direction: row;
+.title-screen {
+    font-size: 28px;
+    margin-left: 30px
 }
 
+.title-box,
 .infos {
     margin-left: 16px;
 }
 
-.title {
-    margin-left: 30px
-}
-
-
 .row-sided {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 24;
+    flex-grow: 24;
 }
-
 
 section {
     background-color: #E7E7E7;
     flex-grow: 28;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.btn {
-    width: 200px;
-    height: 52px;
-    background-color: #7AD9F5;
-    font-size: 20px;
-    font-family: 'Nunito';
-    border-radius: 4px;
-    border: 0;
-    margin-top: 30px;
-    cursor: pointer
-}
-
-
 .chart-test {
-    margin-left: 30px;
-    margin-top: 30px;
     width: 400px;
     height: 400px;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 8;
-    justify-content: center;
+    margin: 30px 0px 0px 30px;
 }
 
 a {
-    text-decoration: none;
     color: #151D3B
 }
 
-.whole-input {
-    display: flex;
-    flex-direction: column;
-    margin-top: 18px;
-}
-
-.with-margin-top {
-  margin-top: 34px;
-}
-
-.writable-input {
-    height: 30px;
-    width: 294px;
-    margin-bottom: 2px;
-    padding: 18px;
-    font-size: 17px;
-    font-family: 'Nunito';
-    font-weight: 100;
-    border-radius: 8px;
-    border: 0;
-    border-width: 1px;
-    border-color: #151D3B;
-    border-style: solid;
-}
-
-.item {
-    font-size: 17px;
-    font-family: 'Nunito';
-    margin-top: 6px
-}
-
+.item,
 .cancel {
     font-size: 17px;
-    font-family: 'Nunito';
     margin-top: 6px
 }
 
-
-.btn {
+.btn-salvar {
     width: 186px;
     height: 52px;
     background-color: #7AD9F5;
     font-size: 20px;
-    font-family: 'Nunito';
     border-radius: 4px;
     border: 0;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .btn-cancel {
-    background-color: #E7E7E7;
     width: 156px;
     height: 52px;
+    background-color: #E7E7E7;
     font-size: 20px;
-    font-family: 'Nunito';
     border-radius: 4px;
     border: 0;
-    margin-top: 30px;
-    margin-left: 18px;
-}
-
-
-.icon-senha {
-    position: absolute;
-    width: 56px;
-    height: 54px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    margin: 30px 0px 0px 18px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 240px
+    justify-content: center;
 }
 
-.data-form {
+.dados-usuario-form {
     margin-left: 40px
 }
 
@@ -154,8 +72,6 @@ a {
     height: 200px;
     background-color: #F6F6F6;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
@@ -164,11 +80,8 @@ a {
     height: 200px;
     background-color: #F6F6F6;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     margin-top: 30px
-
 }
 
 .label {
@@ -176,24 +89,15 @@ a {
 }
 
 .sec-input {
+    width: 80px;
     border: 0;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #151D3B;
+    border-bottom: 1px solid #151D3B;
     margin-left: 10px;
     background-color: #F6F6F6;
     padding-left: 10px;
     font-size: 15px;
-    font-family: 'Nunito';
-    width: 80px;
 }
 
 .sec-input:focus {
     outline-width: 0;
-}
-
-.cancel {
-    margin-top: 42px;
-    margin-left: 50px;
-    font-size: 20px;
 }

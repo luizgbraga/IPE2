@@ -32,12 +32,6 @@ nav {
 
 .action-nav-text {
   font-size: 21px;
-  font-family: "Nunito";
   margin-left: 11px;
   color: #000000
 }
-
-a {
-  text-decoration: none;
-}
-

@@ -31,18 +31,18 @@ if(empty($_GET['editable'])) {
 
       <?php include 'header.view.php'; ?>
 
-        <div class="row-sided">
+        <div class="row-sided row">
 
-          <?php $home_nav = false; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = true; ?>
+            <?php $home_nav = false; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = true; ?>
             <?php include 'nav.view.php'; ?>
 
             <section>
 
-                <h2 class='title'>Configurações do usuário</h2>
+                <h2 class='title-screen'>Configurações do usuário</h2>
 
-                <div class='data-form'>
-                    <div class='primary-info'>
-                        <div class='subtitle'>
+                <div class='dados-usuario-form'>
+                    <div class='primary-info column'>
+                        <div class='title-box row'>
                             <h3>Informações da conta</h3>
                             <img src="assets/edit.png" alt="edit-icon" width="22" height="22" />
                         </div>
@@ -54,8 +54,8 @@ if(empty($_GET['editable'])) {
                         </div>
                     </div>
 
-                    <div class='secundary-info'>
-                        <div class='subtitle'>
+                    <div class='secundary-info column'>
+                        <div class='title-box row'>
                             <h3>Informações da OM</h3>
                             <a id="edit" href="profile.php?editable=1">
                               <img src="assets/edit.png" alt="edit-icon" width="22" height="22" />
@@ -99,9 +99,9 @@ if(empty($_GET['editable'])) {
                     </div>
 
                     <div class='row'>
-                      <button type="submit" class='btn' form="secundary">Salvar alterações</button>
+                      <button type="submit" class='btn-salvar' form="secundary">Salvar alterações</button>
                         <a id="edit" href="profile.php?editable=0">
-                          <p class='cancel'>Cancelar</p>
+                          <p class='btn-cancel'>Cancelar</p>
                         </a>
                     </div>
                 </div>

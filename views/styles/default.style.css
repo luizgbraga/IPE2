@@ -13,6 +13,7 @@ body {
 
 * {
     box-sizing: border-box;
+    font-family: 'Nunito';
 }
 
 .row {
@@ -24,3 +25,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+a {
+    text-decoration: none;
+}
+
+  

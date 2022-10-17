@@ -7,14 +7,22 @@ body {
 }
 
 #island {
-    background-color: #F6F6F6;
+    width: 740px;
     margin: 40px;
     border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    width: 740px;
     flex-grow: 6;
+    background-color: #F6F6F6;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.register-title {
+    font-size: 52px;
+    margin: 68px 0px 56px 108px;
+    letter-spacing: 2px;
+}
+
+.register-form {
+    margin-left: 108px;
 }
 
 aside {
@@ -22,37 +30,17 @@ aside {
     flex-grow: 17
 }
 
-h2 {
-    font-size: 52px;
-    font-family: 'Nunito';
-    margin: 68px 0px 56px 108px;
-    letter-spacing: 2px;
-}
-
-a {
-      text-decoration: none;
-      color: #151D3B
-}
-
-p {
+.already-registered-text {
     font-size: 18px;
-    font-family: 'Nunito';
     margin-top: 6px
 }
 
-.login-form {
-    display: flex;
-    flex-direction: row;
-    margin-left: 108px;
-}
-
-.writable-input {
+.register-input {
     height: 58px;
     width: 388px;
     margin-bottom: 2px;
     padding: 18px;
     font-size: 18px;
-    font-family: 'Nunito';
     font-weight: 100;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -61,6 +49,7 @@ p {
     border-top: 1px solid #151D3B;
     border-right: 1px solid #151D3B;
 }
+
 
 .sigla {
     width: 178px;
@@ -77,28 +66,22 @@ p {
 .margin-top {
     margin-top: 16px
 }
-  
+
 .btn {
     width: 164px;
     height: 54px;
     background-color: #7AD9F5;
     font-size: 22px;
-    font-family: 'Nunito';
     border-radius: 8px;
     border: 0;
     margin-top: 34px;
     cursor: pointer
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
 .icon {
-    background-color: #7AD9F5;
     width: 60px;
     height: 58px;
+    background-color: #7AD9F5;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     display: flex;
@@ -113,9 +96,12 @@ p {
     margin-left: 20px
 }
 
+.goto {
+    color: #151D3B
+}
+
 .invalid-feedback {
     font-size: 17px;
-    font-family: 'Nunito';
     color: #d9534f;
     margin-bottom: 4px;
     padding-left: 1px
@@ -123,7 +109,6 @@ p {
 
 .invalid-margin {
     font-size: 17px;
-    font-family: 'Nunito';
     color: #d9534f;
     margin-bottom: 4px;
     padding-left: 20px
