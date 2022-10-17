@@ -6,6 +6,7 @@
         <title>Crie sua conta</title>
         <meta charset="utf-8">
         <style>
+          <?php include 'styles/default.style.css'; ?>
           <?php include 'styles/register.style.css'; ?>
         </style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">

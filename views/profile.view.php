@@ -13,10 +13,11 @@ if(empty($_GET['editable'])) {
 <html lang="pt-br">
 
     <head>
-        <title>Home</title>
+        <title>Perfil</title>
         <meta charset="utf-8">
 
         <style>
+          <?php include 'styles/default.style.css'; ?>
           <?php include 'styles/header.style.css'; ?>
           <?php include 'styles/profile.style.css'; ?>
           <?php include 'styles/nav.style.css'; ?>

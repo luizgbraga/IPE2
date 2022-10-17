@@ -20,19 +20,19 @@ $subordinados = Data::get_subordinados($_SESSION['id']);
 $subordinados_inputs = [];
 
 $datas = [];
-$all_consumo = [];
-$all_demanda_medida = [];
-
-
-foreach($subordinados as $subordinado) {
-    $inputs = (array) Data::get_inputs($subordinado->id);
-    $subordinados_inputs = [...$subordinados_inputs, $inputs];
-}
+$all_consumo = $all_demanda_medida = $all_energia_ativa = $all_energia_reativa = [];
 
 foreach($user_inputs as $input) {
     $datas = [...$datas, $input->data];
     $all_consumo = [...$all_consumo, $input->dados->consumo];
     $all_demanda_medida = [...$all_demanda_medida, $input->dados->demanda_medida];
+    $all_energia_ativa = [...$all_energia_ativa, $input->dados->energia_ativa];
+    $all_energia_reativa = [...$all_energia_reativa, $input->dados->energia_reativa];
+}
+
+foreach($subordinados as $subordinado) {
+    $inputs = (array) Data::get_inputs($subordinado->id);
+    $subordinados_inputs = [...$subordinados_inputs, $inputs];
 }
 
 $subordinados_consumo = [];

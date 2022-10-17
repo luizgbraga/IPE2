@@ -6,6 +6,7 @@
         <title>Faça seu Login</title>
         <meta charset='utf-8'>
         <style>
+          <?php include 'styles/default.style.css'; ?>
           <?php include 'styles/login.style.css'; ?>
         </style>
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>

@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 
 <html lang='pt-br'>
 
-<head>
+    <head>
 
-    <meta charset='UTF-8'>
-    <title>Adicionar subordinados</title>
+        <meta charset='UTF-8'>
+        <title>Mensgens</title>
 
-    <style>
-        <?php include 'styles/header.style.css'; ?>
-        <?php include 'styles/welcome.style.css'; ?>
-        <?php include 'styles/nav.style.css'; ?>
-        <?php include 'styles/modal.style.css'; ?>
-        <?php include 'styles/acesslevel.style.css'; ?>
-    </style>
+        <style>
+            <?php include 'styles/default.style.css'; ?>
+            <?php include 'styles/header.style.css'; ?>
+            <?php include 'styles/welcome.style.css'; ?>
+            <?php include 'styles/nav.style.css'; ?>
+            <?php include 'styles/modal.style.css'; ?>
+            <?php include 'styles/acesslevel.style.css'; ?>
+        </style>
 
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <?php include 'header.view.php'; ?>
+        <?php include 'header.view.php'; ?>
 
-    <div class='row-sided'>
+        <div class='row-sided'>
 
-        <?php $home_nav = false; $mensagens_nav = true; $adicionar_subordinado_nav = false; $profile_nav = false; ?>
-        <?php include 'nav.view.php'; ?>
+            <?php $home_nav = false; $mensagens_nav = true; $adicionar_subordinado_nav = false; $profile_nav = false; ?>
+            <?php include 'nav.view.php'; ?>
 
-        <div class='column content'>
+            <div class='column content'>
 
-            <h2>Suas mensagens</h2>
+                <h2>Suas mensagens</h2>
 
-            <?php
+                <?php
 
-            foreach($mensagens as $item) {
-            $from = $item->from->id;
-            $name = $item->from->nome;
-            $sigla = $item->from->sigla;
+                foreach($mensagens as $item) {
+                $from = $item->from->id;
+                $name = $item->from->nome;
+                $sigla = $item->from->sigla;
 
-                echo "<p>Mensagem de $name ($sigla) - <a href=accept.php?id=$id&from=$from>Aceitar</a></p>";
-            }
+                    echo "<p>Mensagem de $name ($sigla) - <a href=accept.php?id=$id&from=$from>Aceitar</a></p>";
+                }
 
-            ?>
+                ?>
 
-  <?php include 'modal.view.php'; ?>
+                <?php include 'modal.view.php'; ?>
 
-  </div>
+            </div>
 
-</div>
+        </div>
 
-</body>
+    </body>
 
-<script>
-    <?php include 'scripts/modal.js'; ?>
-  </script>
+    <script>
+        <?php include 'scripts/modal.js'; ?>
+    </script>
 
 </html>

@@ -8,6 +8,7 @@
     <meta charset="utf-8">
 
     <style>
+      <?php include 'styles/default.style.css'; ?>
       <?php include 'styles/header.style.css'; ?>
       <?php include 'styles/welcome.style.css'; ?>
       <?php include 'styles/nav.style.css'; ?>
