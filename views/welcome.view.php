@@ -53,7 +53,6 @@
     const labels = <?php echo json_encode($datas) ?>;
     const consumoJSON = <?php echo json_encode($all_consumo) ?>;
     const demandaJSON = <?php echo json_encode($all_demanda_medida) ?>;
-    const allDataJSON = <?php echo json_encode($subordinados_inputs) ?>;
 
     <?php include 'scripts/data.js'; ?>
     <?php include 'scripts/modal.js'; ?>

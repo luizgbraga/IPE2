@@ -42,7 +42,7 @@
                 echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/hierarchy.png' width="20" height="20">
-                <a href=''>
+                <a href='subordinados.php'>
                     <p class="action-nav-text">Subordinados</p>
                 </a>
             </div>
@@ -60,7 +60,7 @@
 
         <div class='nav-item row'>
             <img class='icon-nav' src='assets/setting.png' width="20" height="20">
-            <a href='subordinados.php'>
+            <a href=''>
                 <p class="action-nav-text">Configurações</p>
             </a>
         </div>
