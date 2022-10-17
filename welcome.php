@@ -21,6 +21,7 @@ $subordinados_inputs = [];
 
 $datas = [];
 $all_consumo = [];
+$all_demanda_medida = [];
 
 
 foreach($subordinados as $subordinado) {
@@ -31,6 +32,7 @@ foreach($subordinados as $subordinado) {
 foreach($user_inputs as $input) {
     $datas = [...$datas, $input->data];
     $all_consumo = [...$all_consumo, $input->dados->consumo];
+    $all_demanda_medida = [...$all_demanda_medida, $input->dados->demanda_medida];
 }
 
 $subordinados_consumo = [];

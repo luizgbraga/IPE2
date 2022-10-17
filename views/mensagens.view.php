@@ -9,7 +9,9 @@
     <title>Adicionar subordinados</title>
 
     <style>
+        <?php include 'styles/header.style.css'; ?>
         <?php include 'styles/welcome.style.css'; ?>
+        <?php include 'styles/nav.style.css'; ?>
         <?php include 'styles/modal.style.css'; ?>
         <?php include 'styles/acesslevel.style.css'; ?>
     </style>
@@ -24,6 +26,7 @@
 
     <div class='row-sided'>
 
+        <?php $home_nav = false; $mensagens_nav = true; $adicionar_subordinado_nav = false; $profile_nav = false; ?>
         <?php include 'nav.view.php'; ?>
 
         <div class='column content'>

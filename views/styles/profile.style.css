@@ -15,56 +15,6 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    background-color: #F6F6F6;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 62px;
-    padding: 0;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color:#151D3B;
-    justify-content: space-between;
-}
-
-.first-part-header {
-    display: flex;
-    flex-direction: row;
-}
-
-.logo-img {
-    height: 40px;
-    border-right-color: #151D3B;
-    border-right-width: 1px;
-    border-right-style: solid;
-    display: flex;
-    width: 300px
-}
-
-.name {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    width: 800px;
-}
-
-h2 {
-    font-size: 30px;
-    font-family: 'Nunito';
-    letter-spacing: 2px;
-}
-
-.actions-header {
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    margin-right: 40px;
-}
 
 h3 {
     font-size: 20px;
@@ -102,42 +52,9 @@ section {
     flex-grow: 28;
 }
 
-nav {
-    background-color: #E7E7E7;
-    border-right-style: solid;
-    border-right-color: #151D3B;
-    border-right-width: 1px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    width: 300px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.dir-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: 500;
-    font-size: 20px;
-    margin-left: 10px;
-    margin-bottom: 20px
-}
-
 .row {
     display: flex;
     flex-direction: row;
-}
-
-.actions-nav {
-    margin-left: 16px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100vh - 140px);
 }
 
 .btn {
@@ -149,14 +66,7 @@ a {
     border-radius: 4px;
     border: 0;
     margin-top: 30px;
-}
-
-
-.action-nav {
-  font-weight: 500;
-  font-size: 20px;
-  font-family: 'Nunito';
-  margin-left: 10px;
+    cursor: pointer
 }
 
 
@@ -204,7 +114,13 @@ a {
     border-style: solid;
 }
 
-p {
+.item {
+    font-size: 17px;
+    font-family: 'Nunito';
+    margin-top: 6px
+}
+
+.cancel {
     font-size: 17px;
     font-family: 'Nunito';
     margin-top: 6px

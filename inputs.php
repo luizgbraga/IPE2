@@ -6,6 +6,12 @@ if(is_post()) {
 
     $data = $consumo = $demanda_medida = $energia_reativa = $energia_ativa =  '';
     $data_err = $consumo_err = $demanda_medida_err = $energia_reativa_err = $energia_ativa_err =  '';
+
+    if(empty(trim($_POST['data']))) {
+        $data_err = 'Insira a data';     
+    } else {
+        $data = trim($_POST['data']);
+    }
     
     if(empty(trim($_POST['consumo']))) {
         $consumo_err = 'Insira o consumo';     

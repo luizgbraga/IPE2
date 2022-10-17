@@ -8,7 +8,9 @@
     <meta charset="utf-8">
 
     <style>
+      <?php include 'styles/header.style.css'; ?>
       <?php include 'styles/welcome.style.css'; ?>
+      <?php include 'styles/nav.style.css'; ?>
       <?php include 'styles/modal.style.css'; ?>
     </style>
 
@@ -22,11 +24,19 @@
 
     <div class="row-sided">
 
+      <?php $home_nav = true; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = false; ?>
       <?php include 'nav.view.php'; ?>
 
-      <section>
+      <section class='row'>
+
         <div class="chart-test">
-          <canvas id="myChart"></canvas>
+          <h2 class='title-consumo'>Consumo</h2>
+          <canvas id="chart-consumo"></canvas>
+        </div>
+
+        <div class="chart-test">
+          <h2 class='title-consumo'>Demanda medida</h2>
+          <canvas id="chart-demanda-medida"></canvas>
         </div>
       </section>
 
@@ -40,7 +50,8 @@
 
   <script>
     const labels = <?php echo json_encode($datas) ?>;
-    const dataJSON = <?php echo json_encode($all_consumo) ?>;
+    const consumoJSON = <?php echo json_encode($all_consumo) ?>;
+    const demandaJSON = <?php echo json_encode($all_demanda_medida) ?>;
     const allDataJSON = <?php echo json_encode($subordinados_inputs) ?>;
 
     <?php include 'scripts/data.js'; ?>

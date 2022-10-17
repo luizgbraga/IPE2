@@ -1,0 +1,50 @@
+header {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 62px;
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:#151D3B;
+    justify-content: space-between;
+}
+
+.first-part-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-img {
+    height: 40px;
+    border-right-color: #151D3B;
+    border-right-width: 1px;
+    border-right-style: solid;
+    display: flex;
+    width: 300px
+}
+
+.name {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 800px;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Nunito';
+    letter-spacing: 2px;
+}
+
+.actions-header {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-right: 40px;
+}

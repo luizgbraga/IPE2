@@ -1,0 +1,51 @@
+nav {
+  background-color: #e7e7e7;
+  border-right-style: solid;
+  border-right-color: #151d3b;
+  border-right-width: 1px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 300px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.item-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+  height: 44px;
+}
+
+.actions-nav {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 140px);
+}
+
+.action-nav {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Nunito";
+  margin-left: 10px;
+  color: #000000
+}
+
+.nav-item {
+  background-color: #a9a9a9;
+  width: 274px;
+  height: 44px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.icon-nav {
+  margin-left: 20px;
+}

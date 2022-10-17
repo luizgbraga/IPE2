@@ -42,6 +42,7 @@ if(is_post()) {
 
     if(empty($nome_err) && empty($sigla_err) && empty($login_err) && empty($senha_err) && empty($confirm_senha_err)) {
         Data::add_user($nome, $sigla, $login, $senha);
+        redirect('login.php');
     }
 }
 

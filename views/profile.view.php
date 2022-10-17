@@ -17,7 +17,9 @@ if(empty($_GET['editable'])) {
         <meta charset="utf-8">
 
         <style>
+          <?php include 'styles/header.style.css'; ?>
           <?php include 'styles/profile.style.css'; ?>
+          <?php include 'styles/nav.style.css'; ?>
           <?php include 'styles/modal.style.css'; ?>
         </style>
 
@@ -30,6 +32,7 @@ if(empty($_GET['editable'])) {
 
         <div class="row-sided">
 
+          <?php $home_nav = false; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = true; ?>
             <?php include 'nav.view.php'; ?>
 
             <section>
