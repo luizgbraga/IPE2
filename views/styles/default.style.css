@@ -1,4 +1,6 @@
-html, body, p {
+html,
+body,
+p {
     margin: 0;
     padding: 0;
 }
@@ -30,4 +32,29 @@ a {
     text-decoration: none;
 }
 
-  
+.is-invalid {
+    border-bottom: 1px solid #d9534f !important;
+    border-top: 1px solid #d9534f !important;
+    border-right: 1px solid #d9534f !important;
+}
+
+.is-invalid-icon {
+    border-bottom: 1px solid #d9534f !important;
+    border-top: 1px solid #d9534f !important;
+    border-left: 1px solid #d9534f !important;
+}
+
+.invalid-feedback {
+    font-size: 17px;
+    color: #d9534f;
+    margin-bottom: 4px;
+    padding-left: 1px;
+    height: 22px;
+}
+
+.invalid-margin {
+    font-size: 17px;
+    color: #d9534f;
+    margin-bottom: 4px;
+    padding-left: 20px
+}

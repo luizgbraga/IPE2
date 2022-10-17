@@ -2,10 +2,6 @@
     margin-left: 36px
 }
 
-p {
-    font-family: 'Nunito';
-}
-
 .search-input {
     height: 49px;
     width: 603px;
@@ -20,14 +16,13 @@ p {
     border-color: #151d3b;
     border-style: solid;
     margin-bottom: 24px
-  }
+}
 
-  .search-btn {
+.search-btn {
     width: 160px;
     height: 50px;
     background-color: #7AD9F5;
     font-size: 20px;
-    font-family: 'Nunito';
     border-radius: 8px;
     border: 0;
     margin-left: 20px
@@ -52,7 +47,6 @@ p {
     height: 44px;
     background-color: #7AD9F5;
     font-size: 18px;
-    font-family: 'Nunito';
     border-radius: 8px;
     border: 0;
     margin-left: 20px;
@@ -69,12 +63,12 @@ p {
 
 .box-users::-webkit-scrollbar {
     display: none;
-  }
-  
-  .box-users {
-    -ms-overflow-style: none; 
+}
+
+.box-users {
+    -ms-overflow-style: none;
     scrollbar-width: none;
-  }
+}
 
 .search-icon {
     position: absolute;
