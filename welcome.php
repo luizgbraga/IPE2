@@ -11,7 +11,12 @@ ensure_user_is_authenticated();
 
 class Consumo {
     public $data;
-    public $consumo;
+    public $consumo; 
+} 
+
+class DemandaMedida {
+    public $data;
+    public $demanda_medida;
 }
 
 $user_inputs = (array) Data::get_inputs($_SESSION['id']);

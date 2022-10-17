@@ -38,6 +38,15 @@
                 </a>
             </div>
 
+            <div class="item-nav <?php if($subordinados_nav === true) {
+                echo 'nav-item';
+            } ?>">
+                <img class='icon-nav' src='assets/hierarchy.png' width="20" height="20">
+                <a href=''>
+                    <p class="action-nav">Subordinados</p>
+                </a>
+            </div>
+
             <div class="item-nav <?php if($profile_nav === true) {
                 echo 'nav-item';
             } ?>">
