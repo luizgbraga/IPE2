@@ -5,7 +5,7 @@
     <head>
 
         <meta charset='UTF-8'>
-        <title>Gerenciar Inputs</title>
+        <title>Comparação</title>
 
         <style>
             <?php include 'styles/default.style.css'; ?>

@@ -4,7 +4,7 @@
 
   <head>
 
-    <title>Home</title>
+    <title>Subordinados</title>
     <meta charset="utf-8">
 
     <style>

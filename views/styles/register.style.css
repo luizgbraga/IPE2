@@ -4,6 +4,12 @@ body {
     display: flex;
     flex-direction: row;
     background-color: #F6F6F6;
+    /*
+    background-image: url('assets/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    */
 }
 
 #island {
@@ -100,3 +106,28 @@ aside {
     color: #151D3B
 }
 
+.invalid-feedback {
+    font-size: 17px;
+    color: #d9534f;
+    margin-bottom: 4px;
+    padding-left: 1px
+}
+
+.invalid-margin {
+    font-size: 17px;
+    color: #d9534f;
+    margin-bottom: 4px;
+    padding-left: 20px
+}
+
+.is-invalid {
+    border-bottom: 1px solid #d9534f !important;
+    border-top: 1px solid #d9534f !important;
+    border-right: 1px solid #d9534f !important;
+}
+
+.is-invalid-icon {
+    border-bottom: 1px solid #d9534f !important;
+    border-top: 1px solid #d9534f !important;
+    border-left: 1px solid #d9534f !important;
+}
