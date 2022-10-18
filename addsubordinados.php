@@ -22,6 +22,6 @@ if(isset($_GET['id'])) {
     redirect('acesslevel.php');
 }
 
-include('./views/acesslevel.view.php');
+include('./views/addsubordinados.view.php');
 
 ?>

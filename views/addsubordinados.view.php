@@ -13,7 +13,7 @@
         <?php include 'styles/welcome.style.css'; ?>
         <?php include 'styles/nav.style.css'; ?>
         <?php include 'styles/modal.style.css'; ?>
-        <?php include 'styles/acesslevel.style.css'; ?>
+        <?php include 'styles/addsubordinados.style.css'; ?>
     </style>
 
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
@@ -63,7 +63,7 @@
                                         <p>$nome</p> 
                                         <p>$sigla</p>
                                     </div> 
-                                    <a class='send-btn' href=acesslevel.php?id=$id&from=$from>Enviar solicitação</a>
+                                    <a class='send-btn' href=addsubordinados.php?id=$id&from=$from>Enviar solicitação</a>
                                 </div>";
                     }
                     }

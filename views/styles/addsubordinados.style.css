@@ -1,20 +1,12 @@
-.content {
-    margin-left: 36px
-}
-
 .search-input {
     height: 49px;
     width: 923px;
-    margin-bottom: 2px;
     padding: 18px;
     font-size: 17px;
-    font-family: "Nunito";
     font-weight: 100;
     border-radius: 8px;
     border: 0;
-    border-width: 1px;
-    border-color: #151d3b;
-    border-style: solid;
+    border: 1px solid #151d3b;
     margin-bottom: 24px
 }
 
@@ -29,16 +21,15 @@
 }
 
 .box-om {
-    background-color: #F6F6F6;
     width: 1104px;
     height: 70px;
+    background-color: #F6F6F6;
     border-radius: 10px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    flex-direction: row;
+    padding: 0px 30px 0px 30px;
     margin-bottom: 16px;
     font-size: 18px;
 }
@@ -73,6 +64,5 @@
 
 .search-icon {
     position: absolute;
-    margin-top: 14px;
-    margin-left: 880px;
+    margin: 14px 0px 0px 880px;
 }

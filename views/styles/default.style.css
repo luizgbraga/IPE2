@@ -28,6 +28,10 @@ body {
     flex-direction: column;
 }
 
+.content {
+    margin-left: 36px
+}
+
 a {
     text-decoration: none;
 }

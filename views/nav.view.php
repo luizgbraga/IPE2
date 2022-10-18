@@ -42,7 +42,7 @@
                 echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/add-user.png' width="20" height="20">
-                <a href='acesslevel.php'>
+                <a href='addsubordinados.php'>
                     <p class="action-nav-text">Adicionar subordinado</p>
                 </a>
             </div>

@@ -73,25 +73,23 @@ label {
 }
 
 .icon-modal {
-  position: absolute;
   width: 46px;
   height: 46px;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 140px;
-  margin-top: 24px;
+  margin: 24px 0px 0px 140px;
 }
 
 /* BOTÕES */
 
 .close-modal {
-  font-size: 20px;
-  color: #000000;
-  margin-left: 36px;
-  margin-top: 26px;
   width: 160px;
   height: 48px;
+  font-size: 20px;
+  color: #000000;
+  margin: 26px 0px 0px 36px;
   display: flex;
   align-items: center;
   justify-content: center;
