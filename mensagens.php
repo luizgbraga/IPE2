@@ -12,6 +12,11 @@ $id = $_SESSION['id'];
  
 $mensagens = (array) Data::get_mensagens($id);
 
+if(isset($_GET['id'])) {
+    Data::accept_notification($_GET['id'], $_GET['from']);
+    redirect('mensagens.php');
+}
+
 include('./views/mensagens.view.php');
 
 ?>

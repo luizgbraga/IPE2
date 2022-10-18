@@ -12,7 +12,6 @@ require_once("app/app.php");
 require('app/data/classes/charts.class.php');
 
 $user_inputs = (array) Data::get_inputs($_SESSION['id']);
-$subordinados = Data::get_subordinados($_SESSION['id']);
 
 $datas = [];
 $all_consumo = $all_demanda_medida = $all_energia_ativa = $all_energia_reativa = [];

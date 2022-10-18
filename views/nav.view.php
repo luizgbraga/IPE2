@@ -20,6 +20,15 @@
                 </a>
             </div>
 
+            <div class="nav-item row <?php if($gerenciar_nav === true) {
+                echo 'colored-nav-item';
+            } ?>">
+                <img class='icon-nav' src='assets/manage.png' width="20" height="20">
+                <a href='gerenciar.php'>
+                    <p class="action-nav-text">Gerenciar Inputs</p>
+                </a>
+            </div>
+
             <div class="nav-item row <?php if($mensagens_nav === true) {
                 echo 'colored-nav-item';
             } ?>">
@@ -42,8 +51,17 @@
                 echo 'colored-nav-item';
             } ?>">
                 <img class='icon-nav' src='assets/hierarchy.png' width="20" height="20">
-                <a href='subordinados.php'>
+                <a href='subordinados.php?subordinados=0'>
                     <p class="action-nav-text">Subordinados</p>
+                </a>
+            </div>
+
+            <div class="nav-item row <?php if($compare_nav === true) {
+                echo 'colored-nav-item';
+            } ?>">
+                <img class='icon-nav' src='assets/compare.png' width="20" height="20">
+                <a href='compare.php'>
+                    <p class="action-nav-text">Comparação</p>
                 </a>
             </div>
 

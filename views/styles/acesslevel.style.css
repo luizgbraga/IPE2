@@ -4,7 +4,7 @@
 
 .search-input {
     height: 49px;
-    width: 603px;
+    width: 923px;
     margin-bottom: 2px;
     padding: 18px;
     font-size: 17px;
@@ -30,7 +30,7 @@
 
 .box-om {
     background-color: #F6F6F6;
-    width: 784px;
+    width: 1104px;
     height: 70px;
     border-radius: 10px;
     display: flex;
@@ -39,7 +39,8 @@
     padding-left: 30px;
     padding-right: 30px;
     flex-direction: row;
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    font-size: 18px;
 }
 
 .send-btn {
@@ -73,5 +74,5 @@
 .search-icon {
     position: absolute;
     margin-top: 14px;
-    margin-left: 570px;
+    margin-left: 880px;
 }

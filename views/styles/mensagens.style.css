@@ -1,0 +1,19 @@
+.content {
+    margin-left: 40px;
+}
+
+.mensagem-text {
+    font-size: 18px;
+}
+
+.empty-mensagens-text {
+    font-size: 24px;
+}
+
+.centered-content {
+    height: 470px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

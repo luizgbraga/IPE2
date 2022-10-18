@@ -30,27 +30,62 @@
 
       <section>
 
-        <h2 class='subordinados-title'>Subordinados</h2>
+        <h2 class='main-title-page'>Subordinados</h2>
 
-        <form class='select-subordinado-form' action="action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <label for="subordinados">Selecione um subordinado</label>
-                <select name="subordinados" id="subordinados">
-                    <?php
+        <?php 
+        $counter = 0;
+        foreach($subordinados as $subordinado) {
+          $counter += 1;
+        }
+        ?>
 
-                        foreach($subordinados as $subordinado) {
-                        $nome = $subordinado->name;
-                        $sigla = $subordinado->sigla;
+        <div <?php if($counter === 0) {
+          echo "class='centered-content'";
+        } ?> >
 
-                            echo "<option value=''>$sigla</option>";
-                        }
+          <?php if($counter === 0) { ?>
+            <p class='empty-subordinados-text'>Não há subordinados</p>
+          <?php } else { ?>
 
-                    ?>
-                </select>
-                <br><br>
-            <input type="submit" value="Ver dados">
-        </form>
+            <form method='get' class='select-subordinado-form' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                <label class='select-label' for="subordinados">Selecione um subordinado</label>
+                    <select name="subordinados" id="subordinados">
+                        <?php
 
-      <?php include 'modal.view.php'; ?>
+                            foreach($subordinados as $subordinado) {
+                            $id = $subordinado->id;
+                            $nome = $subordinado->name;
+                            $sigla = $subordinado->sigla;
+
+                                echo "<option name='subordinado-option' value='$id'>$sigla</option>";
+                            }
+
+                        ?>
+                    </select>
+                <input class='see-data-btn' type="submit" value="Ver dados">
+            </form>
+
+            <section class='row content'>
+
+              <div class="chart-test">
+                <h2 class='title-chart'>Consumo</h2>
+                <canvas id="chart-consumo"></canvas>
+              </div>
+
+              <div class="chart-test">
+                <h2 class='title-chart'>Demanda medida</h2>
+                <canvas id="chart-demanda-medida"></canvas>
+              </div>
+
+            </section>
+
+          <?php } ?>
+
+        </div>
+
+        <?php include 'modal.view.php'; ?>
+
+      </section>
 
     </div>
 
@@ -59,7 +94,12 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
+    const labels = <?php echo json_encode($datas_sub) ?>;
+    const consumoJSON = <?php echo json_encode($all_consumo_sub) ?>;
+    const demandaJSON = <?php echo json_encode($all_demanda_medida_sub) ?>;
 
+    <?php include 'scripts/data.js'; ?>
+    <?php include 'scripts/modal.js'; ?>
   </script>
 
 </html>

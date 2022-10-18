@@ -5,15 +5,14 @@
     <head>
 
         <meta charset='UTF-8'>
-        <title>Mensgens</title>
+        <title>Mensagens</title>
 
         <style>
             <?php include 'styles/default.style.css'; ?>
             <?php include 'styles/header.style.css'; ?>
-            <?php include 'styles/welcome.style.css'; ?>
             <?php include 'styles/nav.style.css'; ?>
             <?php include 'styles/modal.style.css'; ?>
-            <?php include 'styles/acesslevel.style.css'; ?>
+            <?php include 'styles/mensagens.style.css'; ?>
         </style>
 
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
@@ -29,21 +28,44 @@
             <?php $home_nav = false; $mensagens_nav = true; $adicionar_subordinado_nav = false; $profile_nav = false; ?>
             <?php include 'nav.view.php'; ?>
 
-            <div class='column content'>
+            <div class='column'>
 
-                <h2>Suas mensagens</h2>
+                <h2 class='main-title-page'>Suas mensagens</h2>
 
-                <?php
-
-                foreach($mensagens as $item) {
-                $from = $item->from->id;
-                $name = $item->from->nome;
-                $sigla = $item->from->sigla;
-
-                    echo "<p>Mensagem de $name ($sigla) - <a href=accept.php?id=$id&from=$from>Aceitar</a></p>";
-                }
-
+                <?php 
+                    $counter = 0;
+                    foreach($mensagens as $mensagem) {
+                    $counter += 1;
+                    }
                 ?>
+
+                <div <?php if($counter === 0) {
+                    echo "class='centered-content'";
+                    } ?>>
+
+                    <?php if($counter === 0) { ?>
+                        <p class='empty-mensagens-text'>Não há mensagens</p>
+                    <?php } else { ?>
+
+                    <div class='content'>
+
+                        <?php
+
+                        foreach($mensagens as $item) {
+                        $from = $item->from->id;
+                        $name = $item->from->nome;
+                        $sigla = $item->from->sigla;
+
+                            echo "<p class='mensagem-text'>Solicitação de $name ($sigla) - <a href=mensagens.php?id=$id&from=$from>Aceitar</a></p>";
+                        }
+
+                        ?>
+
+                        <?php } ?>
+
+                    </div>
+
+                </div>
 
                 <?php include 'modal.view.php'; ?>
 

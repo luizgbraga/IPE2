@@ -5,7 +5,7 @@
         <div class='logo-img-header row'></div>
 
         <div class='welcome-header row'>
-            <h2 class='welcome-text-header'>Bem vindo, <?php echo $_SESSION["sigla"]; ?></h2>
+            <h2 class='welcome-text-header'>Bem vindo, <?php echo $_SESSION["nome"]; ?></h2>
         </div>
 
     </div>

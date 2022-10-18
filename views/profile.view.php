@@ -38,7 +38,7 @@ if(empty($_GET['editable'])) {
 
             <section>
 
-                <h2 class='title-screen'>Configurações do usuário</h2>
+                <h2 class='main-title-page'>Configurações do usuário</h2>
 
                 <div class='dados-usuario-form'>
                     <div class='primary-info column'>

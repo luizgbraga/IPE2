@@ -17,6 +17,11 @@ if(isset($_GET['search'])) {
     $users = Data::get_users();
 }
 
+if(isset($_GET['id'])) {
+    Data::send_notification($_GET['id'], $_GET['from']);
+    redirect('acesslevel.php');
+}
+
 include('./views/acesslevel.view.php');
 
 ?>
