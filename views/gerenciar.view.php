@@ -24,14 +24,14 @@
 
         <div class='row-sided row'>
 
-            <?php $home_nav = false; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = false; $gerenciar_nav = true; ?>
+            <?php $gerenciar_nav = true; ?>
             <?php include 'nav.view.php'; ?>
 
             <div class='column'>
 
                 <h2 class='main-title-page'>Gerenciar Inputs</h2>
 
-                
+
 
                 <?php include 'modal.view.php'; ?>
 

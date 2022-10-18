@@ -25,7 +25,7 @@
 
     <div class="row-sided row">
 
-      <?php $home_nav = true; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = false; ?>
+      <?php $home_nav = true; ?>
       <?php include 'nav.view.php'; ?>
 
       <section class='row'>
