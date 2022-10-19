@@ -55,8 +55,10 @@
                                             $demanda_medida = $input->dados->demanda_medida;
                                             $energia_ativa = $input->dados->energia_ativa;
                                             $energia_reativa = $input->dados->energia_reativa;
+                                            $action = htmlspecialchars($_SERVER["PHP_SELF"]);
                                             echo "
-                                            <form>
+                                            <form id='row-form' action=$action method='post'>
+                                                <input type="hidden" name="key" value=$_GET['row'] />
                                                 <tr>
                                                     <td>$data</td>
                                                     <td><input type='number' name='consumo' value=$consumo class='table-input'></td>
@@ -113,8 +115,8 @@
                     </table>
 
                     <div class='row'>
-                      <button type="submit" class='btn-salvar' form="secundary">Salvar alterações</button>
-                        <a id="edit" href="profile.php?editable=0">
+                      <button type="submit" class='btn-salvar' form="row-form">Salvar alterações</button>
+                        <a id="edit" href="gerenciar.php">
                           <p class='btn-cancel center-content'>Cancelar</p>
                         </a>
                     </div>

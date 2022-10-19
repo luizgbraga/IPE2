@@ -62,6 +62,10 @@ class Data {
         return self::$ds->add_input($id, $data, $consumo, $demanda_medida, $energia_reativa, $energia_ativa);
     }
 
+    static public function update_input($id, $key, $data, $consumo, $demanda_medida, $energia_ativa, $energia_reativa) {
+        return self::$ds->update_input($id, $key, $data, $consumo, $demanda_medida, $energia_ativa, $energia_reativa);
+    }
+
     static public function update_subordinados($id, $from) {
         return self::$ds->update_subordinados($id, $from);
     }

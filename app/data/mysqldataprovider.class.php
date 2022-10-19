@@ -193,6 +193,32 @@ class MySqlDataProvider extends DataProvider {
         );
     }
 
+    // atualiza um input de certa key com a OM de certo id
+    public function add_input($id, $key, $data, $consumo, $demanda_medida, $energia_reativa, $energia_ativa) {
+        $dados = new Dados();
+        $dados->consumo = $consumo;
+        $dados->demanda_medida = $demanda_medida;
+        $dados->energia_reativa = $energia_reativa;
+        $dados->energia_ativa = $energia_ativa;
+
+        $input = new Input();
+        $input->id = $id;
+        $input->data = $data;
+        $input->dados = $dados;
+
+        $old_inputs = (array) $this->get_inputs($id);
+        $old_inputs[$key] = $input;
+        $inputJSON = json_encode($old_inputs);
+
+        $this->execute(
+            'UPDATE users SET inputs = :input WHERE id = :id',
+            [
+                ':id' => $id,
+                ':input' => $inputJSON
+            ]
+        );
+    }
+
     // retorna a quantidade de usuários com um determinado $login e $senha
     public function auth_user($login, $senha) {
         $db = $this->connect();
