@@ -1,0 +1,30 @@
+#customers {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid var(--dark-grey);
+    padding: 8px;
+    text-align: center;
+    width: 260px;
+    font-size: 18px
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--light-blue);
+    font-weight: 100;
+    text-align: center;
+}
