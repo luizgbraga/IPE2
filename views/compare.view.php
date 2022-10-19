@@ -36,17 +36,15 @@
                 <?php 
                     $counter = 0;
                     foreach($subordinados as $subordinado) {
-                    $counter += 1;
+                        $counter += 1;
                     }
-                    ?>
+                ?>
 
-                    <div <?php if($counter === 0) {
-                    echo "class='centered-content'";
-                    } ?> >
+                <div <?php if($counter === 0) { echo "class='centered-content-box center-content'"; } ?> >
 
-                    <?php if($counter === 0) { ?>
-                        <p class='empty-subordinados-text'>Não há subordinados</p>
-                    <?php } else { ?>
+                <?php if($counter === 0) { ?>
+                    <p class='empty-subordinados-text'>Não há subordinados</p>
+                <?php } else { ?>
 
                 <div class='content'>
 
@@ -59,11 +57,11 @@
                             <?php
 
                                 foreach($subordinados as $subordinado) {
-                                $id = $subordinado->id;
-                                $nome = $subordinado->name;
-                                $sigla = $subordinado->sigla;
+                                    $id = $subordinado->id;
+                                    $nome = $subordinado->name;
+                                    $sigla = $subordinado->sigla;
 
-                                    echo "<option name='subordinado-option' value='$id'>$sigla</option>";
+                                        echo "<option name='subordinado-option' value='$id'>$sigla</option>";
                                 }
 
                             ?>

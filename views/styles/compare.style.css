@@ -6,12 +6,9 @@
     font-size: 24px;
 }
 
-.centered-content {
+.centered-content-box {
     height: 470px;
     width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .select-label-cmp {
@@ -31,10 +28,9 @@
 .see-cmp-btn {
     width: 146px;
     height: 38px;
-    background-color: #7AD9F5;
+    background-color: var(--light-blue);
     font-size: 17px;
     border-radius: 4px;
     border: 0;
     margin: 2px 0px 0px 52px;
-    cursor: pointer;
 }

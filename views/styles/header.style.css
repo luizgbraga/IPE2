@@ -1,18 +1,18 @@
 header {
     height: 62px;
-    background-color: #F6F6F6;
+    background-color: var(--light-grey);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0;
-    border-bottom: 1px solid #151D3B;
+    border-bottom: 1px solid var(--dark-blue);
 }
 
 .logo-img-header {
     width: 300px;
     height: 40px;
-    border-right: 1px solid #151D3B;
+    border-right: 1px solid var(--dark-blue);
 }
 
 .welcome-header {

@@ -52,20 +52,20 @@
                     <?php
 
                     foreach($users as $item) {
-                    $nome = $item->nome;
-                    $sigla = $item->sigla;
-                    $id = $item->id;
-                    $from = $_SESSION['id'];
+                        $nome = $item->nome;
+                        $sigla = $item->sigla;
+                        $id = $item->id;
+                        $from = $_SESSION['id'];
 
-                    if($id !== $from) {
-                        echo "<div class='box-om'>
-                                    <div class='column'>
-                                        <p>$nome</p> 
-                                        <p>$sigla</p>
-                                    </div> 
-                                    <a class='send-btn' href=addsubordinados.php?id=$id&from=$from>Enviar solicitação</a>
-                                </div>";
-                    }
+                        if($id !== $from) {
+                            echo "<div class='box-om'>
+                                        <div class='column'>
+                                            <p>$nome</p> 
+                                            <p>$sigla</p>
+                                        </div> 
+                                        <a class='send-btn center-content' href=addsubordinados.php?id=$id&from=$from>Enviar solicitação</a>
+                                    </div>";
+                        }
                     }
 
                     ?>

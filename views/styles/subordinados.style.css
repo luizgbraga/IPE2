@@ -9,9 +9,6 @@
 .centered-content {
     height: 470px;
     width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .select-label {
@@ -35,7 +32,6 @@
     border-radius: 4px;
     border: 0;
     margin: 2px 0px 0px 52px;
-    cursor: pointer;
 }
 
 .content {

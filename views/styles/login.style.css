@@ -1,6 +1,4 @@
 body {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: row;
     background-image: url('assets/loginIPE.jpg');
@@ -12,7 +10,7 @@ body {
 #island {
     width: 400px;
     margin: 40px;
-    background-color: #F6F6F6;
+    background-color: var(--light-grey);
     border-radius: 14px;
     flex-grow: 5;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -55,45 +53,41 @@ aside {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border: 0;
-    border-bottom: 1px solid #151D3B;
-    border-top: 1px solid #151D3B;
-    border-right: 1px solid #151D3B;
+    border-bottom: 1px solid var(--dark-blue);
+    border-top: 1px solid var(--dark-blue);
+    border-right: 1px solid var(--dark-blue);
 }
 
 .btn {
     width: 164px;
     height: 54px;
-    background-color: #7AD9F5;
+    background-color: var(--light-blue);
     font-size: 22px;
     border-radius: 8px;
     border: 0;
     margin-top: 42px;
-    cursor: pointer
 }
 
 .checkbox {
     width: 18px;
     height: 18px;
-    background-color: #7AD9F5;
+    background-color: var(--light-blue);
     font-size: 20px;
     border-radius: 4px;
     border: 0;
     margin: 8px 8px 0px 0px;
-    accent-color: #151D3B;
+    accent-color: var(--dark-blue);
 }
 
 .icon {
     width: 60px;
     height: 58px;
-    background-color: #7AD9F5;
+    background-color: var(--light-blue);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #151D3B;
-    border-top: 1px solid #151D3B;
-    border-left: 1px solid #151D3B;
+    border-bottom: 1px solid var(--dark-blue);
+    border-top: 1px solid var(--dark-blue);
+    border-left: 1px solid var(--dark-blue);
 }
 
 .next {

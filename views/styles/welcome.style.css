@@ -3,7 +3,7 @@
 }
 
 section {
-    background-color: #E7E7E7;
+    background-color: var(--medium-grey);
     flex-grow: 28;
 }
 

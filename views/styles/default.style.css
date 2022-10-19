@@ -1,3 +1,16 @@
+/* COLORS */
+
+:root {
+    --light-grey: #F6F6F6;
+    --medium-grey: #E7E7E7;
+    --dark-grey: #A9A9A9;
+    --light-blue: #7AD9F5;
+    --dark-blue: #151D3B;
+    -error: var(--error)
+}
+
+/* DEFAULT */
+
 html,
 body,
 p {
@@ -28,8 +41,18 @@ body {
     flex-direction: column;
 }
 
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .content {
     margin-left: 36px;
+}
+
+button, a, input[type=submit], input[type=checkbox] {
+    cursor: pointer
 }
 
 a {
@@ -37,20 +60,20 @@ a {
 }
 
 .is-invalid {
-    border-bottom: 1px solid #d9534f !important;
-    border-top: 1px solid #d9534f !important;
-    border-right: 1px solid #d9534f !important;
+    border-bottom: 1px solid var(--error) !important;
+    border-top: 1px solid var(--error) !important;
+    border-right: 1px solid var(--error) !important;
 }
 
 .is-invalid-icon {
-    border-bottom: 1px solid #d9534f !important;
-    border-top: 1px solid #d9534f !important;
-    border-left: 1px solid #d9534f !important;
+    border-bottom: 1px solid var(--error) !important;
+    border-top: 1px solid var(--error) !important;
+    border-left: 1px solid var(--error) !important;
 }
 
 .invalid-feedback {
     font-size: 17px;
-    color: #d9534f;
+    color: var(--error);
     margin-bottom: 4px;
     padding-left: 1px;
     height: 22px;
@@ -58,7 +81,7 @@ a {
 
 .invalid-margin {
     font-size: 17px;
-    color: #d9534f;
+    color: var(--error);
     margin-bottom: 4px;
     padding-left: 20px
 }

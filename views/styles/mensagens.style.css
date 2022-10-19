@@ -6,10 +6,7 @@
     font-size: 24px;
 }
 
-.centered-content {
+.centered-content-box {
     height: 470px;
     width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

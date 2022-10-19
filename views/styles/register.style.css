@@ -1,6 +1,4 @@
 body {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: row;
     background-image: url('assets/background.jpg');
@@ -47,9 +45,9 @@ aside {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border: 0;
-    border-bottom: 1px solid #151D3B;
-    border-top: 1px solid #151D3B;
-    border-right: 1px solid #151D3B;
+    border-bottom: 1px solid var(--dark-blue);
+    border-top: 1px solid var(--dark-blue);
+    border-right: 1px solid var(--dark-blue);
 }
 
 
@@ -72,7 +70,7 @@ aside {
 .btn {
     width: 164px;
     height: 54px;
-    background-color: #7AD9F5;
+    background-color: var(--light-blue);
     font-size: 22px;
     border-radius: 8px;
     border: 0;
@@ -83,15 +81,12 @@ aside {
 .icon {
     width: 60px;
     height: 58px;
-    background-color: #7AD9F5;
+    background-color: var(--light-blue);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #151D3B;
-    border-top: 1px solid #151D3B;
-    border-left: 1px solid #151D3B;
+    border-bottom: 1px solid var(--dark-blue);
+    border-top: 1px solid var(--dark-blue);
+    border-left: 1px solid var(--dark-blue);
 }
 
 .icon-sigla {
@@ -99,31 +94,5 @@ aside {
 }
 
 .goto {
-    color: #151D3B
-}
-
-.invalid-feedback {
-    font-size: 17px;
-    color: #d9534f;
-    margin-bottom: 4px;
-    padding-left: 1px
-}
-
-.invalid-margin {
-    font-size: 17px;
-    color: #d9534f;
-    margin-bottom: 4px;
-    padding-left: 20px
-}
-
-.is-invalid {
-    border-bottom: 1px solid #d9534f !important;
-    border-top: 1px solid #d9534f !important;
-    border-right: 1px solid #d9534f !important;
-}
-
-.is-invalid-icon {
-    border-bottom: 1px solid #d9534f !important;
-    border-top: 1px solid #d9534f !important;
-    border-left: 1px solid #d9534f !important;
+    color: var(--dark-blue)
 }

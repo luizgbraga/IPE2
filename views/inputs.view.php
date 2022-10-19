@@ -1,4 +1,4 @@
-<div class='new-dados-form'>
+<div class='column center-content'>
 
     <h2 class='title'>Insira um novo dado</h2>
 
@@ -22,7 +22,7 @@
                         <label for='consumo'>Consumo</label>
                         <input type='number' name='consumo' placeholder='kWh' class='left-modal-input'>
                     </div>
-                    <div class='icon-modal'>
+                    <div class='icon-modal center-content'>
                         <img src='assets/plugue.png' alt='plugue-icon' width='22' height='22' />
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <label for='demanda-medida'>Demanda medida</label>
                         <input type='number' name='demanda-medida' placeholder='kWh' class='right-modal-input'>
                     </div>
-                    <div class='icon-modal'>
+                    <div class='icon-modal center-content'>
                         <img src='assets/medidor.png' alt='medidor-icon' width='22' height='22' />
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                         <label for='energia-reativa'>Energia reativa</label>
                         <input type='number' name='energia-reativa' placeholder='kWh' class='left-modal-input'>
                     </div>
-                    <div class='icon-modal'>
+                    <div class='icon-modal center-content'>
                         <img src='assets/energy.png' alt='user-icon' width='22' height='22' />
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         <label for='energia-ativa'>Energia ativa</label>
                         <input type='number' name='energia-ativa' placeholder='kWh' class='right-modal-input'>
                     </div>
-                    <div class='icon-modal'>
+                    <div class='icon-modal center-content'>
                         <img src='assets/energy.png' alt='user-icon' width='22' height='22' />
                     </div>
                 </div>
@@ -78,7 +78,7 @@
 
     <div class='row'>
         <button type='button' id='submit-btn'>Salvar</button>
-        <span class='close-modal'>Cancelar</span>
+        <span class='close-modal center-content'>Cancelar</span>
     </div>
 
 </div>

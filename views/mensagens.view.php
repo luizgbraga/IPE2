@@ -40,7 +40,7 @@
                 ?>
 
                 <div <?php if($counter === 0) {
-                    echo "class='centered-content'";
+                    echo "class='centered-content-box center-content'";
                     } ?>>
 
                     <?php if($counter === 0) { ?>
@@ -52,11 +52,11 @@
                         <?php
 
                         foreach($mensagens as $item) {
-                        $from = $item->from->id;
-                        $name = $item->from->nome;
-                        $sigla = $item->from->sigla;
+                            $from = $item->from->id;
+                            $name = $item->from->nome;
+                            $sigla = $item->from->sigla;
 
-                            echo "<p class='mensagem-text'>Solicitação de $name ($sigla) - <a href=mensagens.php?id=$id&from=$from>Aceitar</a></p>";
+                                echo "<p class='mensagem-text'>Solicitação de $name ($sigla) - <a href=mensagens.php?id=$id&from=$from>Aceitar</a></p>";
                         }
 
                         ?>

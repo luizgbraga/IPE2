@@ -29,7 +29,7 @@
 
                         <div>
                             <div class='row nome'>
-                                <div class='icon <?php echo (!empty($nome_err)) ? 'is-invalid-icon' : ''; ?>'>
+                                <div class='icon center-content <?php echo (!empty($nome_err)) ? 'is-invalid-icon' : ''; ?>'>
                                     <img src="assets/military-base.png" alt="Sigla" width="24" height="24" />
                                 </div>
                                 <input type="text" name="nome" placeholder='Nome de sua OM' class="register-input nome <?php echo (!empty($nome_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nome; ?>">
@@ -39,7 +39,7 @@
 
                         <div>
                             <div class='row'>
-                                <div class='icon icon-sigla <?php echo (!empty($sigla_err)) ? 'is-invalid-icon' : ''; ?>'>
+                                <div class='icon center-content icon-sigla <?php echo (!empty($sigla_err)) ? 'is-invalid-icon' : ''; ?>'>
                                     <img src="assets/card.png" alt="Sigla" width="24" height="24" />
                                 </div>
                                 <input type="text" name="sigla" placeholder='Sigla de sua OM' class="register-input sigla <?php echo (!empty($sigla_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $sigla; ?>">
@@ -51,7 +51,7 @@
 
                     <div class='margin-top'>
                         <div class='row'>
-                            <div class='icon <?php echo (!empty($login_err)) ? 'is-invalid-icon' : ''; ?>'>
+                            <div class='icon center-content <?php echo (!empty($login_err)) ? 'is-invalid-icon' : ''; ?>'>
                                 <img src="assets/user.png" alt="User" width="24" height="24" />
                             </div>
                             <input type="text" name="login" placeholder='Login' class="register-input login <?php echo (!empty($login_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $login; ?>">    
@@ -63,7 +63,7 @@
 
                         <div>
                             <div class='row'>
-                                <div class='icon <?php echo (!empty($senha_err)) ? 'is-invalid-icon' : ''; ?>'>
+                                <div class='icon center-content <?php echo (!empty($senha_err)) ? 'is-invalid-icon' : ''; ?>'>
                                     <img src="assets/lock.png" alt="User" width="24" height="24" />
                                 </div>
                                 <input type="password" name="senha" placeholder='Senha' class="register-input senha <?php echo (!empty($senha_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $senha; ?>">
@@ -73,7 +73,7 @@
 
                         <div>
                             <div class='row'>
-                                <div class='icon icon-sigla <?php echo (!empty($confirm_senha_err)) ? 'is-invalid-icon' : ''; ?>'>
+                                <div class='icon center-content icon-sigla <?php echo (!empty($confirm_senha_err)) ? 'is-invalid-icon' : ''; ?>'>
                                     <img src="assets/key.png" alt="User" width="24" height="24" />
                                 </div>
                                 <input type="password" name="confirm_senha" placeholder='Confirme a senha' class="register-input senha <?php echo (!empty($confirm_senha_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_senha; ?>">

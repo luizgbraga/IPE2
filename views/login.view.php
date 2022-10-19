@@ -29,7 +29,7 @@
 
                     <div>
                         <div class='row'>
-                            <div class='icon <?php echo (!empty($username_err)) ? 'is-invalid-icon' : ''; ?>'>
+                            <div class='icon center-content <?php echo (!empty($username_err)) ? 'is-invalid-icon' : ''; ?>'>
                                 <img src='assets/user.png' alt='user-icon' width='24' height='24' />
                             </div>
                             <input type='text' name='username' placeholder='Login' class='writable-input <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>' value='<?php echo $username; ?>'>
@@ -39,7 +39,7 @@
 
                     <div class='password-input'>
                         <div class='row'>
-                            <div class='icon <?php echo (!empty($password_err)) ? 'is-invalid-icon' : ''; ?>'>
+                            <div class='icon center-content <?php echo (!empty($password_err)) ? 'is-invalid-icon' : ''; ?>'>
                                 <img src='assets/lock.png' alt='lock-icon' width='24' height='24' />
                             </div>
                             <input type='password' name='password' placeholder='Senha' class='writable-input <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>'>

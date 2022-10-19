@@ -33,7 +33,7 @@ if(empty($_GET['editable'])) {
 
         <div class="row-sided row">
 
-            <?php $home_nav = false; $mensagens_nav = false; $adicionar_subordinado_nav = false; $profile_nav = true; ?>
+            <?php $profile_nav = true; ?>
             <?php include 'nav.view.php'; ?>
 
             <section>
@@ -101,7 +101,7 @@ if(empty($_GET['editable'])) {
                     <div class='row'>
                       <button type="submit" class='btn-salvar' form="secundary">Salvar alterações</button>
                         <a id="edit" href="profile.php?editable=0">
-                          <p class='btn-cancel'>Cancelar</p>
+                          <p class='btn-cancel center-content'>Cancelar</p>
                         </a>
                     </div>
                 </div>

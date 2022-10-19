@@ -31,8 +31,6 @@
 
                 <h2 class='main-title-page'>Gerenciar Inputs</h2>
 
-
-
                 <?php include 'modal.view.php'; ?>
 
             </div>

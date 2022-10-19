@@ -4,11 +4,6 @@ h3 {
     margin: 0px 12px 12px 0px;
 }
 
-.title-screen {
-    font-size: 28px;
-    margin-left: 30px
-}
-
 .title-box,
 .infos {
     margin-left: 16px;
@@ -19,14 +14,8 @@ h3 {
 }
 
 section {
-    background-color: #E7E7E7;
+    background-color: var(--medium-grey);
     flex-grow: 28;
-}
-
-.chart-test {
-    width: 400px;
-    height: 400px;
-    margin: 30px 0px 0px 30px;
 }
 
 a {
@@ -42,7 +31,7 @@ a {
 .btn-salvar {
     width: 186px;
     height: 52px;
-    background-color: #7AD9F5;
+    background-color: var(--light-blue);
     font-size: 20px;
     border-radius: 4px;
     border: 0;
@@ -53,14 +42,11 @@ a {
 .btn-cancel {
     width: 156px;
     height: 52px;
-    background-color: #E7E7E7;
+    background-color: var(--medium-grey);
     font-size: 20px;
     border-radius: 4px;
     border: 0;
     margin: 30px 0px 0px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .dados-usuario-form {
@@ -70,7 +56,7 @@ a {
 .primary-info {
     width: 800px;
     height: 200px;
-    background-color: #F6F6F6;
+    background-color: var(--light-grey);
     border-radius: 10px;
     justify-content: center;
 }
@@ -78,7 +64,7 @@ a {
 .secundary-info {
     width: 800px;
     height: 200px;
-    background-color: #F6F6F6;
+    background-color: var(--light-grey);
     border-radius: 10px;
     justify-content: center;
     margin-top: 30px
@@ -91,9 +77,9 @@ a {
 .sec-input {
     width: 80px;
     border: 0;
-    border-bottom: 1px solid #151D3B;
+    border-bottom: 1px solid var(--dark-blue);
     margin-left: 10px;
-    background-color: #F6F6F6;
+    background-color: var(--light-grey);
     padding-left: 10px;
     font-size: 15px;
 }

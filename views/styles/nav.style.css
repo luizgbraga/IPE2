@@ -1,7 +1,7 @@
 nav {
   width: 300px;
-  background-color: #e7e7e7;
-  border-right: 1px solid #151d3b;
+  background-color: var(--medium-grey);
+  border-right: 1px solid var(--dark-blue);
   margin: 16px 0px 16px 0px;
 }
 
@@ -14,7 +14,7 @@ nav {
 .colored-nav-item {
   width: 278px;
   height: 44px;
-  background-color: #a9a9a9;
+  background-color: var(--dark-grey);
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
 }

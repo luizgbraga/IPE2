@@ -40,7 +40,7 @@
         ?>
 
         <div <?php if($counter === 0) {
-          echo "class='centered-content'";
+          echo "class='centered-content center-content'";
         } ?> >
 
           <?php if($counter === 0) { ?>
