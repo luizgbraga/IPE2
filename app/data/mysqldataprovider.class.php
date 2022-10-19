@@ -194,7 +194,7 @@ class MySqlDataProvider extends DataProvider {
     }
 
     // atualiza um input de certa key com a OM de certo id
-    public function add_input($id, $key, $data, $consumo, $demanda_medida, $energia_reativa, $energia_ativa) {
+    public function update_input($id, $key, $data, $consumo, $demanda_medida, $energia_reativa, $energia_ativa) {
         $dados = new Dados();
         $dados->consumo = $consumo;
         $dados->demanda_medida = $demanda_medida;

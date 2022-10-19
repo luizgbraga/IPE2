@@ -58,9 +58,9 @@
                                             $action = htmlspecialchars($_SERVER["PHP_SELF"]);
                                             echo "
                                             <form id='row-form' action=$action method='post'>
-                                                <input type="hidden" name="key" value=$_GET['row'] />
+                                                <input type='hidden' name='key' value=$key />
                                                 <tr>
-                                                    <td>$data</td>
+                                                    <td><input type='date' name='data' value=$data class='table-input'></td>
                                                     <td><input type='number' name='consumo' value=$consumo class='table-input'></td>
                                                     <td><input type='number' name='demanda-medida' value=$demanda_medida class='table-input'></td>
                                                     <td><input type='number' name='energia-ativa' value=$energia_ativa class='table-input'></td>
