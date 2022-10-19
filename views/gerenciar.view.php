@@ -42,7 +42,6 @@
                             <th>Energia Ativa</th>
                             <th>Energia Reativa</th>
                         </tr>
-                        <tr>
                             <?php
 
                                 foreach($user_inputs as $input) {
@@ -52,16 +51,17 @@
                                     $energia_ativa = $input->dados->energia_ativa;
                                     $energia_reativa = $input->dados->energia_reativa;
                                     echo "
-                                        <td>$data</td>
-                                        <td>$consumo</td>
-                                        <td>$demanda_medida</td>
-                                        <td>$energia_ativa</td>
-                                        <td>$energia_reativa</td>
-                                    "
+                                        <tr>
+                                            <td>$data</td>
+                                            <td>$consumo</td>
+                                            <td>$demanda_medida</td>
+                                            <td>$energia_ativa</td>
+                                            <td>$energia_reativa</td>
+                                        </tr>
+                                    ";
                                 }
 
                             ?>
-                        </tr>
                     </table>
                 
                 </div>
