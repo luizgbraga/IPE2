@@ -110,21 +110,6 @@
 
                             ?>
 
-<tr>
-                                                <td><a href='gerenciar.php?row=$key'>$data</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$consumo</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$demanda_medida</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$energia_ativa</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$energia_reativa</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href='gerenciar.php?row=$key'>$data</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$consumo</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$demanda_medida</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$energia_ativa</a></td>
-                                                <td><a href='gerenciar.php?row=$key'>$energia_reativa</a></td>
-                                            </tr>
-
                     </table>
 
                     <div class='row'>
