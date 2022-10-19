@@ -43,3 +43,12 @@ td > a:first-child {
     color: #000000;
     z-index: 0;
 }
+
+.table-input {
+    width: 120px;
+    border: 0;
+    border-bottom: 1px solid var(--dark-blue);
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+}

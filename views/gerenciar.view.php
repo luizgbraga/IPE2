@@ -44,24 +44,72 @@
                         </tr>
                             <?php
 
-                                foreach($user_inputs as $input) {
-                                    $data = $input->data;
-                                    $consumo = $input->dados->consumo;
-                                    $demanda_medida = $input->dados->demanda_medida;
-                                    $energia_ativa = $input->dados->energia_ativa;
-                                    $energia_reativa = $input->dados->energia_reativa;
-                                    echo "
-                                        <tr>
-                                            <td><a href='#'>$data</a></td>
-                                            <td><a href='#'>$consumo</a></td>
-                                            <td><a href='#'>$demanda_medida</a></td>
-                                            <td><a href='#'>$energia_ativa</a></td>
-                                            <td><a href='#'>$energia_reativa</a></td>
-                                        </tr>
-                                    ";
+                                if(isset($_GET['key'])) {
+
+                                    foreach($user_inputs as $key=>$input) {
+
+                                        if($key === $_GET['key']) {
+
+                                            $data = $input->data;
+                                            $consumo = $input->dados->consumo;
+                                            $demanda_medida = $input->dados->demanda_medida;
+                                            $energia_ativa = $input->dados->energia_ativa;
+                                            $energia_reativa = $input->dados->energia_reativa;
+                                            echo "
+                                            <form>
+                                                <tr>
+                                                    <td>$data</td>
+                                                    <td><input type='number' name='consumo' value=$consumo class='table-input'></td>
+                                                    <td><input type='number' name='demanda-medida' value=$demanda_medida class='table-input'></td>
+                                                    <td><input type='number' name='energia-ativa' value=$energia_ativa class='table-input'></td>
+                                                    <td><input type='number' name='energia-reativa' value=$energia_reativa class='table-input'></td>
+                                                </tr>
+                                            </form>
+                                        ";
+
+                                        } else {
+
+                                            $data = $input->data;
+                                            $consumo = $input->dados->consumo;
+                                            $demanda_medida = $input->dados->demanda_medida;
+                                            $energia_ativa = $input->dados->energia_ativa;
+                                            $energia_reativa = $input->dados->energia_reativa;
+                                            echo "
+                                                <tr>
+                                                    <td><a href='gerenciar.php?row=$key'>$data</a></td>
+                                                    <td><a href='gerenciar.php?row=$key'>$consumo</a></td>
+                                                    <td><a href='gerenciar.php?row=$key'>$demanda_medida</a></td>
+                                                    <td><a href='gerenciar.php?row=$key'>$energia_ativa</a></td>
+                                                    <td><a href='gerenciar.php?row=$key'>$energia_reativa</a></td>
+                                                </tr>
+                                            ";
+
+                                        }
+                                    }
+
+                                } else {
+
+                                    foreach($user_inputs as $key=>$input) {
+                                        $data = $input->data;
+                                        $consumo = $input->dados->consumo;
+                                        $demanda_medida = $input->dados->demanda_medida;
+                                        $energia_ativa = $input->dados->energia_ativa;
+                                        $energia_reativa = $input->dados->energia_reativa;
+                                        echo "
+                                            <tr>
+                                                <td><a href='gerenciar.php?row=$key'>$data</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$consumo</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$demanda_medida</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$energia_ativa</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$energia_reativa</a></td>
+                                            </tr>
+                                        ";
+                                    }
                                 }
+                                    
 
                             ?>
+
                     </table>
                 
                 </div>
