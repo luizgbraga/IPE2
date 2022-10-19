@@ -36,11 +36,11 @@
 
                     <table id="customers">
                         <tr>
-                            <th>Data</th>
+                            <th class='first-title-table'>Data</th>
                             <th>Consumo</th>
                             <th>Demanda medida</th>
                             <th>Energia Ativa</th>
-                            <th>Energia Reativa</th>
+                            <th class='last-title-table'>Energia Reativa</th>
                         </tr>
                             <?php
 
@@ -52,11 +52,11 @@
                                     $energia_reativa = $input->dados->energia_reativa;
                                     echo "
                                         <tr>
-                                            <td>$data</td>
-                                            <td>$consumo</td>
-                                            <td>$demanda_medida</td>
-                                            <td>$energia_ativa</td>
-                                            <td>$energia_reativa</td>
+                                            <td><a href='#'>$data</a></td>
+                                            <td><a href='#'>$consumo</a></td>
+                                            <td><a href='#'>$demanda_medida</a></td>
+                                            <td><a href='#'>$energia_ativa</a></td>
+                                            <td><a href='#'>$energia_reativa</a></td>
                                         </tr>
                                     ";
                                 }
@@ -76,6 +76,14 @@
 
     <script>
         <?php include 'scripts/modal.js'; ?>
+    </script>
+
+    <script>
+
+        const row = document.getElementById('open-modal');
+        row.addEventListener("click", () => {
+        window.location.href = `#`;
+
     </script>
 
 </html>

@@ -5,7 +5,6 @@
 
 #customers td,
 #customers th {
-    border: 1px solid var(--dark-grey);
     padding: 8px;
     text-align: center;
     width: 200px;
@@ -27,4 +26,20 @@
     background-color: var(--light-blue);
     font-weight: 100;
     text-align: center;
+}
+
+.first-title-table {
+    border-top-left-radius: 10px;
+}
+
+.last-title-table {
+    border-top-right-radius: 10px;
+}
+
+td > a:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    z-index: 0;
 }
