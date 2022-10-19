@@ -1,0 +1,40 @@
+.select-subordinado-form {
+    margin-left: 32px
+}
+
+.empty-subordinados-text {
+    font-size: 24px;
+}
+
+.centered-content {
+    height: 470px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-label-cmp {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+#subordinados-cmp {
+    width: 210px;
+    height: 36px;
+    margin-left: 16px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 16px
+}
+
+.see-cmp-btn {
+    width: 146px;
+    height: 38px;
+    background-color: #7AD9F5;
+    font-size: 17px;
+    border-radius: 4px;
+    border: 0;
+    margin: 2px 0px 0px 52px;
+    cursor: pointer;
+}

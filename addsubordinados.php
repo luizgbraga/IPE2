@@ -19,7 +19,7 @@ if(isset($_GET['search'])) {
 
 if(isset($_GET['id'])) {
     Data::send_notification($_GET['id'], $_GET['from']);
-    redirect('acesslevel.php');
+    redirect('addsubordinados.php');
 }
 
 include('./views/addsubordinados.view.php');

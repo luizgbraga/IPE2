@@ -16,7 +16,7 @@
             <img src='assets/bell.png' width="26" height="26">
         </a>
 
-        <a href=''>
+        <a href='aboutus.php'>
             <img src='assets/question.png' width="26" height="26">
         </a>
 

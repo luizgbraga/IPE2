@@ -15,7 +15,7 @@
 }
 
 .select-label {
-    font-size: 20px
+    font-size: 20px;
 }
 
 #subordinados {
@@ -24,7 +24,7 @@
     margin-left: 16px;
     border-radius: 10px;
     padding-left: 10px;
-    font-size: 16px
+    font-size: 18px
 }
 
 .see-data-btn {
@@ -41,7 +41,6 @@
 .content {
     margin: 16px 0px 0px 28px;
 }
-
 
 .chart-test {
     width: 520px;
