@@ -16,7 +16,7 @@
 }
 
 #customers tr:hover {
-    background-color: #ddd;
+    background-color: var(--emp-grey);
 }
 
 #customers th {
@@ -50,5 +50,38 @@ td > a:first-child {
     border-bottom: 1px solid var(--dark-blue);
     margin-left: 10px;
     padding-left: 10px;
-    font-size: 15px;
+    font-size: 18px;
+    background-color: inherit;
+}
+
+
+.table-input:focus {
+    outline-width: 0;
+}
+
+.btn-salvar {
+    width: 186px;
+    height: 52px;
+    background-color: var(--light-blue);
+    font-size: 20px;
+    border-radius: 4px;
+    border: 0;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    width: 156px;
+    height: 52px;
+    background-color: var(--medium-grey);
+    font-size: 20px;
+    border-radius: 4px;
+    border: 0;
+    margin: 30px 0px 0px 18px;
+    color: #000000
+}
+
+.content-spread {
+    height: calc(100vh - 230px);
+    justify-content: space-between;
 }

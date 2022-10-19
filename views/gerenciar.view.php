@@ -32,7 +32,7 @@
 
                 <h2 class='main-title-page'>Gerenciar Inputs</h2>
 
-                <div class='content'>
+                <div class='content content-spread column'>
 
                     <table id="customers">
                         <tr>
@@ -76,11 +76,11 @@
                                             $energia_reativa = $input->dados->energia_reativa;
                                             echo "
                                                 <tr>
-                                                    <td><a href='gerenciar.php?row=$key'>$data</a></td>
-                                                    <td><a href='gerenciar.php?row=$key'>$consumo</a></td>
-                                                    <td><a href='gerenciar.php?row=$key'>$demanda_medida</a></td>
-                                                    <td><a href='gerenciar.php?row=$key'>$energia_ativa</a></td>
-                                                    <td><a href='gerenciar.php?row=$key'>$energia_reativa</a></td>
+                                                    <td>$data</td>
+                                                    <td>$consumo</td>
+                                                    <td>$demanda_medida</td>
+                                                    <td>$energia_ativa</td>
+                                                    <td>$energia_reativa</td>
                                                 </tr>
                                             ";
 
@@ -110,7 +110,29 @@
 
                             ?>
 
+<tr>
+                                                <td><a href='gerenciar.php?row=$key'>$data</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$consumo</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$demanda_medida</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$energia_ativa</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$energia_reativa</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href='gerenciar.php?row=$key'>$data</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$consumo</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$demanda_medida</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$energia_ativa</a></td>
+                                                <td><a href='gerenciar.php?row=$key'>$energia_reativa</a></td>
+                                            </tr>
+
                     </table>
+
+                    <div class='row'>
+                      <button type="submit" class='btn-salvar' form="secundary">Salvar alterações</button>
+                        <a id="edit" href="profile.php?editable=0">
+                          <p class='btn-cancel center-content'>Cancelar</p>
+                        </a>
+                    </div>
                 
                 </div>
 
