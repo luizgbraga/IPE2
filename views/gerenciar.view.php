@@ -44,11 +44,11 @@
                         </tr>
                             <?php
 
-                                if(isset($_GET['key'])) {
+                                if(isset($_GET['row'])) {
 
                                     foreach($user_inputs as $key=>$input) {
 
-                                        if($key === $_GET['key']) {
+                                        if($key == $_GET['row']) {
 
                                             $data = $input->data;
                                             $consumo = $input->dados->consumo;
@@ -124,14 +124,6 @@
 
     <script>
         <?php include 'scripts/modal.js'; ?>
-    </script>
-
-    <script>
-
-        const row = document.getElementById('open-modal');
-        row.addEventListener("click", () => {
-        window.location.href = `#`;
-
     </script>
 
 </html>
