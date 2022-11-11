@@ -1,8 +1,8 @@
 
-# Introdução a Projetos de Engenharia (IPE)
+# Introdução a Projetos de Engenharia (IPE) 2
 
 Nessa disciplina do 4° período do Instituto Militar de Engenharia (IME), desenvolvemos projetos reais de Engenharia (solicitados
-por OMs do Exército Brasileiro) com a finalidade de pôr em prática os conhecimentos das outras disciplinas. 
+por OMs do Exército Brasileiro) com a finalidade de pôr em prática os conhecimentos de outras disciplinas. 
 
 O projeto escolhido foi: **Desenvolvimento de um Software (MVP) que possibilite o controle e avaliação do consumo de energia**.
 
