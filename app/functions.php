@@ -39,6 +39,7 @@ function b_to_a($demanda) {
     }
 }
 
+
 function conta_mensal_demanda($demanda_medida, $demanda_contratada_periodo, $tarifa, $tarifa_ultrapassagem, $tol) {
     $conta_mensal = 0;
     $conta_mensal += max($demanda_medida, $demanda_contratada_periodo) * $tarifa;
@@ -48,10 +49,26 @@ function conta_mensal_demanda($demanda_medida, $demanda_contratada_periodo, $tar
     return $conta_mensal;
 }
 
+function conta_mensal_demanda_pfp($demanda_medida_pfp, $demanda_contratada_periodo_pfp, $tarifa_pfp, $tarifa_ultrapassagem_pfp, $tol) {
+    $conta_mensal = 0;
+    $conta_mensal += conta_mensal_demanda($demanda_medida_pfp[0], $demanda_contratada_periodo_pfp[0], $tarifa_pfp[0], $tarifa_ultrapassagem_pfp[0], $tol);
+    $conta_mensal += conta_mensal_demanda($demanda_medida_pfp[1], $demanda_contratada_periodo_pfp[1], $tarifa_pfp[1], $tarifa_ultrapassagem_pfp[1], $tol);
+
+    return $conta_mensal;
+}
+
 function conta_periodo_demanda($demandas_periodo, $demanda_contratada_periodo, $tarifa, $tarifa_ultrapassagem, $tol) {
     $conta_periodo = 0;
     foreach($demandas_periodo as $demanda_medida) {
         $conta_periodo += conta_mensal_demanda($demanda_medida, $demanda_contratada_periodo, $tarifa, $tarifa_ultrapassagem, $tol);
+    }
+    return $conta_periodo;
+}
+
+function conta_periodo_demanda_pfp($demandas_periodo_pfp, $demanda_contratada_periodo_pfp, $tarifa_pfp, $tarifa_ultrapassagem_pfp, $tol) {
+    $conta_periodo = 0;
+    foreach($demandas_periodo_pfp as $demanda_medida_pfp) {
+        $conta_periodo += conta_mensal_demanda_pfp($demanda_medida_pfp, $demanda_contratada_periodo_pfp, $tarifa_pfp, $tarifa_ultrapassagem_pfp, $tol);
     }
     return $conta_periodo;
 }
