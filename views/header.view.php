@@ -2,7 +2,9 @@
 
     <div class='row'>
 
-        <div class='logo-img-header row'></div>
+        <div class='logo-img-header row'>
+            <img src='assets/logo-amber.png' height="40">
+        </div>
 
         <div class='welcome-header row'>
             <h2 class='welcome-text-header'>Bem vindo, <?php echo $_SESSION["nome"]; ?></h2>

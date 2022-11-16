@@ -1,5 +1,14 @@
 let consumo = [];
 let demandaMedida = [];
+let secundary = {
+  efetivo: Number(secundaryJSON[0]),
+  metragem: Number(secundaryJSON[1]),
+  demandaContratada: Number(secundaryJSON[2]),
+  modalidade: secundaryJSON[3],
+};
+
+let limit = [];
+let optimal = [];
 
 for(let el of consumoJSON) {
   consumo.push(Number(el));
@@ -7,6 +16,8 @@ for(let el of consumoJSON) {
 
 for(let el of demandaJSON) {
   demandaMedida.push(Number(el));
+  limit.push(secundary.demandaContratada);
+  optimal.push(optimalDemanda);
 }
 
 function year(data) {
@@ -36,10 +47,27 @@ const dataConsumo = {
 const dataDemandaMedida = {
   labels: better,
   datasets: [{
-    label: 'Consumo',
+    type: 'line',
+    label: 'Demanda contratada',
+    backgroundColor: '#151D3B',
+    borderColor: '#151D3B',
+    data: limit
+  },
+
+  {
+    type: 'line',
+    label: 'Demanda contratada',
+    backgroundColor: '#4CBB17',
+    borderColor: '#4CBB17',
+    data: optimal
+  },
+  
+  {
+    type: 'bar',
+    label: 'Demanda medida',
     backgroundColor: '#5D13E7',
     borderColor: '#5D13E7',
-    data: demandaMedida
+    data: demandaMedida,
   }]
 };
 
@@ -47,6 +75,7 @@ const configConsumo = {
   type: 'line',
   data: dataConsumo,
   options: {
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false
@@ -56,14 +85,23 @@ const configConsumo = {
 };
 
 const configDemandaMedida = {
-  type: 'line',
+  type: 'bar',
   data: dataDemandaMedida,
   options: {
+    maintainAspectRatio: false,
+
+    elements: {
+      point:{
+          radius: 0
+      }
+    },
+
     plugins: {
       legend: {
         display: false
       }
-    }
+    },
+    
   }
 };
 

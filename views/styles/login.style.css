@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: row;
-    background-image: url('assets/loginIPE.jpg');
+    background-image: url('assets/background-amber.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

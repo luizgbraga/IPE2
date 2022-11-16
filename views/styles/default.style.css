@@ -7,7 +7,10 @@
     --light-blue: #7AD9F5;
     --dark-blue: #151D3B;
     --emp-grey: #DDDDDD;
-    -error: var(--error)
+    --error: #FF6347;
+    --success: #77DD77;
+    --neutral: #AEC6CF;
+    --yellow: #FCFC69;
 }
 
 /* DEFAULT */

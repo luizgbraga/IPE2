@@ -54,7 +54,7 @@ a {
 }
 
 .primary-info {
-    width: 800px;
+    width: 500px;
     height: 200px;
     background-color: var(--light-grey);
     border-radius: 10px;
@@ -62,12 +62,22 @@ a {
 }
 
 .secundary-info {
-    width: 800px;
-    height: 200px;
+    width: 500px;
+    height: 140px;
     background-color: var(--light-grey);
     border-radius: 10px;
     justify-content: center;
     margin-top: 30px
+}
+
+.energetic-info {
+    width: 380px;
+    height: 370px;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    justify-content: center;
+    margin: 0px 0px 0px 30px;
+    padding: 24px 0px 0px 10px
 }
 
 .label {
@@ -86,4 +96,12 @@ a {
 
 .sec-input:focus {
     outline-width: 0;
+}
+
+.warning-profile {
+    margin: 8px 0px 0px 16px
+}
+
+.submit-form {
+    margin-left: 40px
 }

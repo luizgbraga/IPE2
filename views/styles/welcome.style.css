@@ -7,12 +7,44 @@ section {
     flex-grow: 28;
 }
 
-.chart-test {
-    width: 520px;
-    height: 400px;
-    margin: 30px 0px 0px 36px;
+.chart-demanda {
+    width: 820px;
+    height: 270px;
+    margin: 10px 0px 0px 36px;
+}
+
+.chart-consumo {
+    width: 572px;
+    height: 190px;
+    margin: 0px 0px 0px 36px;
+}
+
+canvas {
+    background-color: var(--light-grey);
+    padding: 16px;
+    border-radius: 10px
 }
 
 .title-chart {
     font-size: 24px;
+}
+
+.demanda-infos {
+    margin-top: 82px
+}
+
+.consumo-infos {
+    margin-top: 72px
+}
+
+.yellow-warning-img {
+    position: absolute;
+    margin-left: 278px;
+    margin-top: -12px
+}
+
+.percentual-info {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 80px
 }

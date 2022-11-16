@@ -1,3 +1,22 @@
+<?php
+
+$sec = Data::get_secundary(($_SESSION['id']));
+$profile_warnings = array_map('value', $sec);
+$counter = 0;
+foreach($profile_warnings as $el) {
+    if($el == 'Não há') {
+        $counter++;
+    }
+}
+if($counter === 0) {
+    $warning = false;
+} else {
+    $warning = true;
+}
+
+?>
+
+
 <nav>
 
     <div class="actions-nav column">
@@ -72,6 +91,9 @@
                 <a href='profile.php'>
                     <p class="action-nav-text">Perfil</p>
                 </a>
+                <?php if($warning) {
+                    echo "<img class='warning-nav' src='assets/warning.png' width='20' height='20'>";
+                } ?>
             </div>
 
         </div>

@@ -40,7 +40,8 @@ if(empty($_GET['editable'])) {
 
                 <h2 class='main-title-page'>Configurações do usuário</h2>
 
-                <div class='dados-usuario-form'>
+                <div class='dados-usuario-form row'>
+                  <div class='column'>
                     <div class='primary-info column'>
                         <div class='title-box row'>
                             <h3>Informações da conta</h3>
@@ -62,12 +63,20 @@ if(empty($_GET['editable'])) {
                             </a>
                         </div>
 
-                        <?php if(!$editable) { ?>
+                        <?php if($editable != 1) { ?>
                           <div class='infos'>
-                              <p class='item'><strong>Efetivo: </strong><?php echo value($sec[0]) ?></p>
-                              <p class='item'><strong>Metragem: </strong><?php echo value($sec[1]) ?></p>
-                              <p class='item'><strong>Demanda: </strong><?php echo value($sec[2]) ?></p>
-                              <p class='item'><strong>Modalidade: </strong><?php echo value($sec[3]) ?></p>
+                              <div class='row'>
+                                <p class='item'><strong>Efetivo: </strong><?php echo value($sec[0]) ?></p>
+                                <?php if($profile_warnings[0] == 'Não há') {
+                                  echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                } ?>
+                              </div>
+                              <div class='row'>
+                                <p class='item'><strong>Metragem: </strong><?php echo value($sec[1]) ?></p>
+                                <?php if($profile_warnings[1] == 'Não há') {
+                                  echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                } ?>
+                              </div>
                           </div>
                         <?php }  else { ?>
                           <form id='secundary' action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -83,27 +92,82 @@ if(empty($_GET['editable'])) {
                                 <input type='number' name='metragem' value=<?php echo value($sec[1]) ?> class='sec-input'>
                               </div>
 
-                              <div class='row'>
-                                <p class='item'>Demanda:</p>
-                                <input type='number' name='demanda'value=<?php echo value($sec[2]) ?> class='sec-input'>
-                              </div>
-
-                              <div class='row'>
-                                <p class='item'>Modalidade:</p>
-                                <input type='text' name='modalidade'value=<?php echo value($sec[3]) ?> class='sec-input'>
-                              </div>
                             </div>
 
                           </form>
                         <?php }  ?>
                     </div>
+                  </div>
 
-                    <div class='row'>
-                      <button type="submit" class='btn-salvar' form="secundary">Salvar alterações</button>
-                        <a id="edit" href="profile.php?editable=0">
-                          <p class='btn-cancel center-content'>Cancelar</p>
-                        </a>
+                  <div class='energetic-info'>
+                    <div class='title-box row'>
+                            <h3>Perfil Energético da OM</h3>
+                            <a id="edit" href="profile.php?editable=2">
+                              <img src="assets/edit.png" alt="edit-icon" width="22" height="22" />
+                            </a>
+                        </div>
+
+                      
+                        <?php if($editable != 2) { ?>
+                          <div class='infos'>
+                      <p class='item'><strong>Grupo:</strong> <?= $_SESSION["nome"] ?></p>
+                      <p class='item'><strong>Subgrupo:</strong> <?= $_SESSION["sigla"] ?></p>
+                      <p class='item'><strong>Tarifa:</strong> <?= $_SESSION["username"] ?></p>
+                      <p class='item'><strong>Demanda contratada (úmido):</strong> <?= $_SESSION["password"] ?></p>
+                      <p class='item'><strong>Demanda contratada (seco):</strong> <?= $_SESSION["password"] ?></p>
                     </div>
+                        <?php }  else { ?>
+                          <form id='secundary' action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                          
+                            <div class='infos'>
+                              <div class='row'>
+                                <p class='item'>Grupo:</p>
+                                <select>
+                                  <option>A</option>
+                                  <option>B</option>
+                                </select>
+                              </div>
+
+                              <div class='row'>
+                                <p class='item'>Subgrupo:</p>
+                                <select>
+                                  <option>A</option>
+                                  <option>B</option>
+                                </select>
+                              </div>
+
+                              <div class='row'>
+                                <p class='item'>Tarifa:</p>
+                                <select>
+                                  <option>Horossazonal verde</option>
+                                  <option>Horossazonal azul</option>
+                                </select>
+                              </div>
+
+                              <div class='row'>
+                                <p class='item'>Demanda contratada (úmido):</p>
+                                <input type='number' name='metragem' value=<?php echo value($sec[1]) ?> class='sec-input'>
+                              </div>
+
+                              <div class='row'>
+                                <p class='item'>Demanda contratada (seco):</p>
+                                <input type='number' name='metragem' value=<?php echo value($sec[1]) ?> class='sec-input'>
+                              </div>
+
+                            </div>
+
+                          </form>
+                        <?php }  ?>
+
+
+                  </div>
+                </div>
+
+                <div class=' submit-form row'>
+                  <button type="submit" class='btn-salvar' form="secundary">Salvar alterações</button>
+                    <a id="edit" href="profile.php?editable=0">
+                      <p class='btn-cancel center-content'>Cancelar</p>
+                    </a>
                 </div>
                 
                 <?php include 'modal.view.php'; ?>

@@ -7,7 +7,7 @@
 #customers th {
     padding: 8px;
     text-align: center;
-    width: 200px;
+    width: 210px;
     font-size: 18px
 }
 
@@ -45,7 +45,7 @@ td > a:first-child {
 }
 
 .table-input {
-    width: 120px;
+    width: 140px;
     border: 0;
     border-bottom: 1px solid var(--dark-blue);
     margin-left: 10px;
