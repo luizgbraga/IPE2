@@ -26,7 +26,7 @@ function ensure_user_is_authenticated() {
 }
 
 function value($el) {
-    if(!empty($el) || $el === 0) {
+    if(!empty($el)) {
         return $el;
     } else {
         return 'Não há';

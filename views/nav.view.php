@@ -1,7 +1,11 @@
 <?php
 
 $sec = Data::get_secundary(($_SESSION['id']));
-$profile_warnings = array_map('value', $sec);
+$en = Data::get_energetic(($_SESSION['id']));
+$sec_warnings = array_slice(array_map('value', $sec), 0, 2);
+$en_warnings = (array_map('value', $en));
+$profile_warnings = array_merge($sec_warnings, $en_warnings);
+
 $counter = 0;
 foreach($profile_warnings as $el) {
     if($el == 'Não há') {
