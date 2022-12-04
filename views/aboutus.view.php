@@ -33,9 +33,9 @@
 
                 <div class='content-about'>
 
-                    <p class='about-text'>Somos uma empresa onde buscamos o bem estar de nossos clientes. E como conseguimos esse bem estar? Um dos caminhos é a economia energética, e o nosso propósito é auxiliar e assessorar nossos contratantes por meio de consultorias especializadas em cima de dados e análises.</p>
+                    <p class='about-text'>Somos uma empresa onde buscamos tornar acessível a todos o controle do balanço energético de uma organização ou estabelecimento. Para isso, desenvolvemos algoritmos matemáticos de otimização energética, sugestões prescritivas para redução de multas futuras, visualização intuitiva dos principais dados energéticos de sua empresa, entre muitas outras ferramentas. E como fazemos isso? Eis o nosso diferencial: nossa interface é amigável e simples, de modo que qualquer usuário é capaz de acessá-la e aproveitá-la em seu máximo.</p>
                     <br>
-                    <p class='about-text'>Prezamos pela transparência na formulação de relatórios de resultado de consumo energético, com o único viés de propor soluções para o atingimento das metas de sua organização, sem a parcialidade de promover produtos ou serviços parceiros, apenas o melhor caminho.</p>
+                    <p class='about-text'>Prezamos, em primeiro lugar, pelos nossos clientes. Por isso, democratizamos o acesso a um ambiente fácil para reunir seu balanço energético em um só lugar. Sem necessidade de consultoria humana, o software é capaz de indicar qual o melhor modelo de contrato com sua concessionária, a fim de reduzir ao máximo os gastos e multas. Será que a melhor tarifa para o meu estabelecimento de fato é a horossazonal verde? Ou ainda, será que eu tenho a necessidade de instalar um banco de capacitores para aumento do fator de potência? Ou pior: será que não existe uma melhor demanda a ser contratada para reduzir ao máximo as multas mensalmente? Não se preocupe com as terminologias complicadas, a Amber veio para ajudar!</p>
 
                 </div>
 

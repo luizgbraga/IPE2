@@ -56,7 +56,7 @@
                             $name = $item->from->nome;
                             $sigla = $item->from->sigla;
 
-                                echo "<p class='mensagem-text'>Solicitação de $name ($sigla) - <a href=mensagens.php?id=$id&from=$from>Aceitar</a></p>";
+                                echo "<p class='mensagem-text'>Solicitação de $name ($sigla) <a class='accept-message' href=mensagens.php?id=$id&from=$from>Aceitar</a></p>";
                         }
 
                         ?>

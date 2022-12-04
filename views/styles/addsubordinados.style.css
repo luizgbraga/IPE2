@@ -37,10 +37,11 @@
 .send-btn {
     width: 180px;
     height: 44px;
-    background-color: var(--light-blue);
     font-size: 18px;
-    border-radius: 8px;
-    border: 0;
+    background-color: rgba(119, 221, 119, 0.4);
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
     margin-left: 20px;
     color: #000000
 }

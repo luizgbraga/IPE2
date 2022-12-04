@@ -10,3 +10,13 @@
     height: 470px;
     width: 1200px;
 }
+
+.accept-message {
+    padding: 6px 14px;
+    background-color: #7AD9F5;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 0;
+    margin: 2px 0px 0px 8px;
+}
