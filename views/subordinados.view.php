@@ -94,12 +94,40 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-    const labels = <?php echo json_encode($datas_sub) ?>;
-    const consumoJSON = <?php echo json_encode($all_consumo_sub) ?>;
-    const demandaJSON = <?php echo json_encode($all_demanda_medida_sub) ?>;
+        <?php if(!$datas) { ?>
+      const labels = [];
+    <?php } else { ?>
+      const labels = <?php echo json_encode($datas_sub) ?>;
+    <?php } ?>
+
+    <?php if(!$all_consumo_p) { ?>
+      const consumoPJSON = [];
+    <?php } else { ?>
+      const consumoPJSON = <?php echo json_encode($all_consumo_p_sub) ?>;
+    <?php } ?>
+
+    <?php if(!$all_consumo_fp) { ?>
+      const consumoFPJSON = [];
+    <?php } else { ?>
+      const consumoFPJSON = <?php echo json_encode($all_consumo_fp_sub) ?>;
+    <?php } ?>
+
+    <?php if(!$all_demanda_medida_p) { ?>
+        const demandaJSON = [];
+      <?php } else { ?>
+        const demandaJSON = <?php echo json_encode($all_demanda_medida_p) ?>;
+      <?php } ?>
+
+      const modalidade = 'verde'
 
     <?php include 'scripts/data.js'; ?>
-    <?php include 'scripts/modal.js'; ?>
+
+    <?php if($en_inputs['modalidade'] === 'verde') {
+      include 'scripts/modal.js';
+    }  else {
+      include 'scripts/modalAzul.js'; 
+    }
+    ?>
   </script>
 
 </html>

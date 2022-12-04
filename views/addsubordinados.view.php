@@ -80,8 +80,14 @@
 
 </body>
 
+
 <script>
-    <?php include 'scripts/modal.js'; ?>
-  </script>
+        <?php if($en_inputs['modalidade'] === 'verde') {
+            include 'scripts/modal.js';
+        }  else {
+            include 'scripts/modalAzul.js'; 
+        }
+        ?>
+    </script>
 
 </html>

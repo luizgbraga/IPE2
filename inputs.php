@@ -1,11 +1,14 @@
 <?php
 
 require_once('app/app.php');
+
+$en = Data::get_energetic($_SESSION['id']);
+$modalidade = $en['modalidade'];
  
 if(is_post()) {
 
-    $data = $consumo = $demanda_medida = $energia_reativa = $energia_ativa =  '';
-    $data_err = $consumo_err = $demanda_medida_err = $energia_reativa_err = $energia_ativa_err =  '';
+    $data = $consumo_p = $consumo_fp = $demanda_medida_p = $demanda_medida_fp = $energia_reativa = $energia_ativa =  '';
+    $data_err = $consumo_p_err = $consumo_fp_err = $demanda_medida_p_err = $demanda_medida_fp_err = $energia_reativa_err = $energia_ativa_err =  '';
 
     if(empty(trim($_POST['data']))) {
         $data_err = 'Insira a data';     
@@ -13,17 +16,34 @@ if(is_post()) {
         $data = trim($_POST['data']);
     }
     
-    if(empty(trim($_POST['consumo']))) {
-        $consumo_err = 'Insira o consumo';     
+    if(empty(trim($_POST['consumo-p']))) {
+        $consumo_p_err = 'Insira o consumo';     
     } else {
-        $consumo = trim($_POST['consumo']);
+        $consumo_p = trim($_POST['consumo-p']);
     }
 
-    if(empty(trim($_POST['demanda-medida']))) {
-        $demanda_medida_err = 'Insira a demanda';     
+    if(empty(trim($_POST['consumo-fp']))) {
+        $consumo_fp_err = 'Insira o consumo';     
     } else {
-        $demanda_medida = trim($_POST['demanda-medida']);
+        $consumo_fp = trim($_POST['consumo-fp']);
     }
+
+    if(empty(trim($_POST['demanda-medida-p']))) {
+        $demanda_medida_p_err = 'Insira a demanda';     
+    } else {
+        $demanda_medida_p = trim($_POST['demanda-medida-p']);
+    }
+
+
+    if($modalidade === 'azul') {
+        if(empty(trim($_POST['demanda-medida-fp']))) {
+            $demanda_medida_fp_err = 'Insira a demanda';     
+        } else {
+            $demanda_medida_fp = trim($_POST['demanda-medida-fp']);
+        }
+    }
+
+
 
     if(empty(trim($_POST['energia-reativa']))) {
         $energia_reativa_err = 'Insira uma energia reativa';     
@@ -37,10 +57,18 @@ if(is_post()) {
         $energia_ativa = trim($_POST['energia-ativa']);
     }
 
-    if(empty($data_err) && empty($consumo_err) && empty($demanda_medida_err) && empty($demanda_reativa_err) && empty($demanda_ativa_err)) {
-        Data::add_input($_SESSION['id'], $data, $consumo, $demanda_medida, $energia_ativa, $energia_reativa);
-        redirect('welcome.php');
+    if($modalidade === 'verde') {
+        if(empty($data_err) && empty($consumo_p_err) && empty($demanda_medida_p_err) && empty($energia_reativa_err) && empty($energia_ativa_err)) {
+            Data::add_input($_SESSION['id'], $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_p, $energia_ativa, $energia_reativa, 0);
+        }
+    } else {
+        if(empty($data_err) && empty($consumo_p_err) && empty($demanda_medida_p_err) && empty($demanda_medida_fp_err) && empty($energia_reativa_err) && empty($energia_ativa_err)) {
+            Data::add_input($_SESSION['id'], $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_fp, $energia_ativa, $energia_reativa, 0);
+            echo $data;
+        }
     }
+
+    redirect('welcome.php');
 }
 
 include('./views/inputs.view.php');

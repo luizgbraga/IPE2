@@ -41,25 +41,53 @@ class MySqlDataProvider extends DataProvider {
             $oms = [...$oms, $om];
         }
 
-        return $oms;
+        return $oms[0];
     }
 
-    // atualiza um usuário com dados secundários (efetivo, metragem, demanda, modalidade)
-    public function update_user($id, $efetivo, $metragem, $demanda, $modalidade) {
+    // atualiza um usuário com dados secundários
+    public function update_secundary($id, $efetivo, $metragem, $possui_subordinados, $possui_gerdistr) {
         $this->execute(
             'UPDATE users SET 
             efetivo = :efetivo, 
             metragem = :metragem, 
-            demanda = :demanda, 
-            modalidade = :modalidade 
+            possui_subordinados = :possui_subordinados, 
+            possui_gerdistr = :possui_gerdistr 
             WHERE id = :id',
 
             [
                 ':id' => $id,
                 ':efetivo' => $efetivo,
                 ':metragem' => $metragem,
-                ':demanda' => $demanda,
-                ':modalidade' => $modalidade
+                ':possui_subordinados' => $possui_subordinados,
+                ':possui_gerdistr' => $possui_gerdistr
+            ]
+        );
+    }
+
+    // atualiza um usuário com dados energéticos
+    public function update_energetic($id, $concessionaria, $grupo, $subgrupo, $modalidade, $demanda_up, $demanda_ufp, $demanda_sp, $demanda_sfp) {
+        $this->execute(
+            'UPDATE users SET 
+            concessionaria = :concessionaria, 
+            grupo = :grupo, 
+            subgrupo = :subgrupo, 
+            modalidade = :modalidade,
+            demanda_up = :demanda_up,
+            demanda_ufp = :demanda_ufp,
+            demanda_sp = :demanda_sp,
+            demanda_sfp = :demanda_sfp
+            WHERE id = :id',
+    
+            [
+                ':id' => $id,
+                ':concessionaria' => $concessionaria,
+                ':grupo' => $grupo,
+                ':subgrupo' => $subgrupo,
+                ':modalidade' => $modalidade,
+                ':demanda_up' => $demanda_up,
+                ':demanda_ufp' => $demanda_ufp,
+                ':demanda_sp' => $demanda_sp,
+                ':demanda_sfp' => $demanda_sfp,
             ]
         );
     }
@@ -71,13 +99,39 @@ class MySqlDataProvider extends DataProvider {
             [':id' => $id]
         );
 
-        $infos = [];
-
         foreach($result as $row) {
-            $infos = [$row['efetivo'], $row['metragem'], $row['demanda'], $row['modalidade']];
+            $secundary_infos = array( 
+                'efetivo' => $row['efetivo'],
+                'metragem' => $row['metragem'],
+                'possui_subordinados' => $row['possui_subordinados'],
+                'possui_gerdistr' => $row['possui_gerdistr']
+            );
         }
 
-        return $infos;
+        return $secundary_infos;
+    }
+
+    // retorna uma array com as informações energéticas de um certo id
+    public function get_energetic($id) {
+        $result = $this->query(
+            'SELECT * FROM users WHERE id = :id',
+            [':id' => $id]
+        );
+    
+        foreach($result as $row) {
+            $energetic_infos = array( 
+                'concessionaria' => $row['concessionaria'],
+                'grupo' => $row['grupo'],
+                'subgrupo' => $row['subgrupo'],
+                'modalidade' => $row['modalidade'],
+                'demanda_up' => $row['demanda_up'],
+                'demanda_ufp' => $row['demanda_ufp'],
+                'demanda_sp' => $row['demanda_sp'],
+                'demanda_sfp' => $row['demanda_sfp']
+            );
+        }
+    
+        return $energetic_infos;
     }
 
     // retorna o nome e sigla de uma om provida de certo id
@@ -88,9 +142,10 @@ class MySqlDataProvider extends DataProvider {
         );
 
         foreach($result as $row) {
-            $om = [];
-            $om = [...$om, $row['nome']];
-            $om = [...$om, $row['sigla']];
+            $om = array( 
+                'nome' => $row['nome'],
+                'sigla' => $row['sigla'],
+            );
         }
 
         return $om;
@@ -141,38 +196,51 @@ class MySqlDataProvider extends DataProvider {
     }
     
     // adiciona um usuário no banco de dados
-    public function add_user($nome, $sigla, $login, $senha) {
+    public function add_user($login, $senha, $nome, $sigla) {
         $sql = "INSERT INTO users SET 
-        nome = :nome, 
-        sigla = :sigla, 
         login = :login, 
         senha = :senha,
+        nome = :nome, 
+        sigla = :sigla, 
+        possui_subordinados = 0,
+        concessionaria = '',
+        grupo = '',
+        subgrupo = '',
+        modalidade = '',
         efetivo = 0,
         metragem = 0,
-        demanda = 0,
-        modalidade = '',
+        possui_gerdistr = 0,
+        demanda_up = 0,
+        demanda_ufp = 0,
+        demanda_sp = 0,
+        demanda_sfp = 0,
         subordinados = '{}',
         inputs = '{}',
-        mensagens = '{}'";
+        mensagens = '{}',
+        master = 0
+        ";
 
         $this->execute(
             $sql,
             [
+                ':login' => $login,
+                ':senha' => $senha,
                 ':nome' => $nome,
                 ':sigla' => $sigla,
-                ':login' => $login,
-                ':senha' => $senha
             ]
         );
     }
 
     // adiciona um dado de input à OM com certo id
-    function add_input($id, $data, $consumo, $demanda_medida, $energia_reativa, $energia_ativa) {
+    function add_input($id, $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_fp, $energia_reativa, $energia_ativa, $ger_distribuida) {
         $dados = new Dados();
-        $dados->consumo = $consumo;
-        $dados->demanda_medida = $demanda_medida;
+        $dados->consumo_p = $consumo_p;
+        $dados->consumo_fp = $consumo_fp;
+        $dados->demanda_medida_p = $demanda_medida_p;
+        $dados->demanda_medida_fp = $demanda_medida_fp;
         $dados->energia_reativa = $energia_reativa;
         $dados->energia_ativa = $energia_ativa;
+        $dados->ger_distribuida = $ger_distribuida;
         
         $input = new Input();
         $input->id = $id;
@@ -194,12 +262,15 @@ class MySqlDataProvider extends DataProvider {
     }
 
     // atualiza um input de certa key com a OM de certo id
-    public function update_input($id, $key, $data, $consumo, $demanda_medida, $energia_reativa, $energia_ativa) {
+    public function update_input($id, $key, $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_fp, $energia_reativa, $energia_ativa, $ger_distribuida) {
         $dados = new Dados();
-        $dados->consumo = $consumo;
-        $dados->demanda_medida = $demanda_medida;
+        $dados->consumo_p = $consumo_p;
+        $dados->consumo_fp = $consumo_fp;
+        $dados->demanda_medida_p = $demanda_medida_p;
+        $dados->demanda_medida_fp = $demanda_medida_fp;
         $dados->energia_reativa = $energia_reativa;
         $dados->energia_ativa = $energia_ativa;
+        $dados->ger_distribuida = $ger_distribuida;
 
         $input = new Input();
         $input->id = $id;
@@ -284,7 +355,7 @@ class MySqlDataProvider extends DataProvider {
     // envia uma mensagem (objeto da classe mensagem) de um $from para um $id
     public function send_notification($id, $from) {
         $mensagem = new Mensagem();
-        $mensagem->from = $this->get_user($from)[0];
+        $mensagem->from = $this->get_user($from);
 
         $mensagem_arr = (array) $mensagem;
         $old_mensagens = (array) $this->get_mensagens($id);
@@ -303,7 +374,7 @@ class MySqlDataProvider extends DataProvider {
     // atuliza os subordinados de $id, adicionando $from
     public function update_subordinados($from, $id) {
         $old_subordinados = (array) $this->get_subordinados($id);
-        $new_subordinado = $this->get_user($from)[0];
+        $new_subordinado = $this->get_user($from);
         $updated_subordinados = (object) [...$old_subordinados, $new_subordinado];
         $subordinadosJSON = json_encode($updated_subordinados);
 

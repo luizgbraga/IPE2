@@ -32,6 +32,7 @@ closeBtn.onclick = function() {
     document.getElementsByClassName('invalid-feedback')[3].textContent = '';
     document.getElementsByClassName('invalid-feedback')[4].textContent = '';
     document.getElementsByClassName('invalid-feedback')[5].textContent = '';
+    document.getElementsByClassName('invalid-feedback')[6].textContent = '';
 }
 
 // ENVIA o formulário caso esteja tudo preenchido; senão, não envia
@@ -39,7 +40,8 @@ submitBtn.onclick = function() {
   let data = document.forms['dados']['data'].value;
   let consumo_p = document.forms['dados']['consumo-p'].value;
   let consumo_fp = document.forms['dados']['consumo-fp'].value;
-  let demandaMedida = document.forms['dados']['demanda-medida-p'].value;
+  let demandaMedidaPonta = document.forms['dados']['demanda-medida-p'].value;
+  let demandaMedidaForaPonta = document.forms['dados']['demanda-medida-fp'].value;
   let energiaAtiva = document.forms['dados']['energia-ativa'].value;
   let energiaReativa = document.forms['dados']['energia-reativa'].value;
 
@@ -55,19 +57,23 @@ submitBtn.onclick = function() {
     document.getElementsByClassName('invalid-feedback')[2].textContent ='Insira um consumo';
   } if(consumo_fp !== '') {
     document.getElementsByClassName('invalid-feedback')[2].textContent = '';
-  } if(demandaMedida === '') {
+  } if(demandaMedidaPonta === '') {
     document.getElementsByClassName('invalid-feedback')[3].textContent ='Insira uma demanda';
-  } if(demandaMedida !== '') {
+  } if(demandaMedidaPonta !== '') {
     document.getElementsByClassName('invalid-feedback')[3].textContent = '';
+  } if(demandaMedidaForaPonta === '') {
+    document.getElementsByClassName('invalid-feedback')[4].textContent ='Insira uma demanda';
+  } if(demandaMedidaForaPonta !== '') {
+    document.getElementsByClassName('invalid-feedback')[4].textContent = '';
   } if(energiaAtiva === '') {
-    document.getElementsByClassName('invalid-feedback')[4].textContent ='Insira uma energia reativa';
+    document.getElementsByClassName('invalid-feedback')[5].textContent ='Insira uma energia reativa';
   } if(energiaAtiva !== '') {
-    document.getElementsByClassName('invalid-feedback')[4].textContent ='';
+    document.getElementsByClassName('invalid-feedback')[5].textContent ='';
   } if(energiaReativa === '') {
-    document.getElementsByClassName('invalid-feedback')[5].textContent ='Insira uma energia ativa';
+    document.getElementsByClassName('invalid-feedback')[6].textContent ='Insira uma energia ativa';
   } if(energiaReativa !== '') {
-    document.getElementsByClassName('invalid-feedback')[5].textContent = '';
-  } if(data !== '' && consumo_p !== '' && consumo_fp !== '' &&demandaMedida !== '' && energiaAtiva !== '' && energiaReativa !== '') {
+    document.getElementsByClassName('invalid-feedback')[6].textContent = '';
+  } if(data !== '' && demandaMedidaPonta !== '' && demandaMedidaForaPonta !== '' && energiaAtiva !== '' && energiaReativa !== '') {
     document.getElementById('dados').submit();
   }
 }

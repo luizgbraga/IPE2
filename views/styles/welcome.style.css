@@ -7,34 +7,68 @@ section {
     flex-grow: 28;
 }
 
+.title-profile {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 0px
+}
+
+.energetic-profile {
+    width: 1156px;
+    height: 160px;
+    margin: 20px 0px 10px 36px;
+    background-color: var(--light-grey);
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.primary-infos {
+    margin-right: 30px;
+    width: 340px;
+}
+
+.demandas {
+    width: 200px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value-demanda {
+    margin-top: 18px;
+    font-size: 26px;
+}
+
 .chart-demanda {
-    width: 820px;
-    height: 270px;
+    width: 572px;
+    height: 190px;
     margin: 10px 0px 0px 36px;
 }
 
 .chart-consumo {
     width: 572px;
-    height: 190px;
+    height: 172px;
     margin: 0px 0px 0px 36px;
 }
 
 canvas {
     background-color: var(--light-grey);
-    padding: 16px;
-    border-radius: 10px
+    padding: 12px;
+    border-radius: 10px;
 }
 
 .title-chart {
     font-size: 24px;
+    margin: 0px 0px 8px 0px;
 }
 
 .demanda-infos {
-    margin-top: 82px
+    margin-top: 52px
 }
 
 .consumo-infos {
-    margin-top: 72px
+    margin-top: 42px
 }
 
 .yellow-warning-img {

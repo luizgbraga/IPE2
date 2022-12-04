@@ -14,8 +14,8 @@
   background-color: var(--light-grey);
   margin: 5% auto;
   padding: 20px;
-  width: 34%;
-  height: 70%;
+  width: 37%;
+  height: 84%;
   border-radius: 16px;
 }
 
@@ -25,7 +25,7 @@
 
 .right-modal-input {
   height: 46px;
-  width: 188px;
+  width: 208px;
   margin-bottom: 2px;
   padding: 18px;
   font-size: 17px;
@@ -37,7 +37,7 @@
 
 .left-modal-input {
   height: 46px;
-  width: 188px;
+  width: 208px;
   margin-bottom: 2px;
   padding: 18px;
   font-size: 17px;
@@ -50,7 +50,7 @@
 
 .data-input {
   height: 46px;
-  width: 403px;
+  width: 443px;
   margin-bottom: 2px;
   padding: 18px;
   font-size: 17px;
@@ -69,7 +69,7 @@ label {
   width: 46px;
   height: 46px;
   position: absolute;
-  margin: 24px 0px 0px 140px;
+  margin: 24px 0px 0px 160px;
 }
 
 /* BOTÕES */

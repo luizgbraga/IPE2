@@ -57,23 +57,27 @@ if($counter === 0) {
                 </a>
             </div>
 
-            <div class="nav-item row <?php if($adicionar_subordinado_nav === true) {
+            <?php if($sec['possui_subordinados'] === 1) { ?>
+                <div class="nav-item row <?php if($adicionar_subordinado_nav === true) {
                 echo 'colored-nav-item';
-            } ?>">
-                <img class='icon-nav' src='assets/add-user.png' width="20" height="20">
-                <a href='addsubordinados.php'>
-                    <p class="action-nav-text">Adicionar subordinado</p>
-                </a>
-            </div>
+                } ?>">
+                    <img class='icon-nav' src='assets/add-user.png' width="20" height="20">
+                    <a href='addsubordinados.php'>
+                        <p class="action-nav-text">Adicionar subordinado</p>
+                    </a>
+                </div>
 
             <div class="nav-item row <?php if($subordinados_nav === true) {
                 echo 'colored-nav-item';
-            } ?>">
-                <img class='icon-nav' src='assets/hierarchy.png' width="20" height="20">
-                <a href='subordinados.php?subordinados=0'>
-                    <p class="action-nav-text">Subordinados</p>
-                </a>
-            </div>
+                } ?>">
+                    <img class='icon-nav' src='assets/hierarchy.png' width="20" height="20">
+                    <a href='subordinados.php?subordinados=0'>
+                        <p class="action-nav-text">Subordinados</p>
+                    </a>
+                </div>
+            <?php } ?>
+
+            <!---
 
             <div class="nav-item row <?php if($compare_nav === true) {
                 echo 'colored-nav-item';
@@ -83,6 +87,7 @@ if($counter === 0) {
                     <p class="action-nav-text">Comparação</p>
                 </a>
             </div>
+            -->
 
             <div class="nav-item row <?php if($profile_nav === true) {
                 echo 'colored-nav-item';

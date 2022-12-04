@@ -19,12 +19,17 @@ class DemandaMedida {
 
 class EnergiaAtiva {
     public $data;
-    public $demanda_medida;
+    public $energia_ativa;
 }
 
 class EnergiaReativa {
     public $data;
-    public $demanda_medida;
+    public $energia_reativa;
+}
+
+class GerDistribuida {
+    public $data;
+    public $ger_distribuida;
 }
 
 ?>

@@ -31,9 +31,8 @@ if(is_post()){
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password; 
             $_SESSION['id'] = Data::get_id($_SESSION['username'], $_SESSION['password']);       
-            $_SESSION['nome'] = Data::get_name($_SESSION['id'])[0];          
-            $_SESSION['sigla'] = Data::get_name($_SESSION['id'])[1];       
-            
+            $_SESSION['nome'] = Data::get_name($_SESSION['id'])['nome'];         
+            $_SESSION['sigla'] = Data::get_name($_SESSION['id'])['sigla'];       
             redirect('welcome.php');
         } else {
             $login_err = 'Nome de usuário ou senha inválidos';

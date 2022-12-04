@@ -84,8 +84,14 @@
 
     </body>
 
+
     <script>
-        <?php include 'scripts/modal.js'; ?>
+        <?php if($en_inputs['modalidade'] === 'verde') {
+            include 'scripts/modal.js';
+        }  else {
+            include 'scripts/modalAzul.js'; 
+        }
+        ?>
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>

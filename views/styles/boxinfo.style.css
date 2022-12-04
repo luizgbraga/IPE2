@@ -2,9 +2,19 @@
     display: flex;
     background-color: var(--light-grey);
     height: 80px;
-    width: 300px;
+    width: 260px;
     border-radius: 10px;
-    margin: 0px 0px 28px 30px;
+    margin: 0px 0px 14px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.box-info-down {
+    display: flex;
+    background-color: var(--light-grey);
+    height: 80px;
+    width: 260px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 

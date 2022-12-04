@@ -13,6 +13,7 @@
         </style>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
     
     </head>
 
