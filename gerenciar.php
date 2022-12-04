@@ -23,7 +23,7 @@ if(is_post()) {
     $energia_ativa = trim($_POST['energia-ativa']);
     $energia_reativa = trim($_POST['energia-reativa']);
 
-    Data::update_input($_SESSION['id'], $key, $data, $consumo_p, $consumo_fp, $demanda_medida, $demanda_medida, $energia_ativa, $energia_reativa, $ger_distribuida);
+    Data::update_input($_SESSION['id'], $key, $data, $consumo_p, $consumo_fp, $demanda_medida, $demanda_medida, $energia_reativa, $energia_ativa, $ger_distribuida);
     redirect('gerenciar.php');
 
   }

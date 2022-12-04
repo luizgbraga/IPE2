@@ -113,6 +113,8 @@ if($energia_ativa_media == 0 || $energia_reativa_media == 0) {
     $fp_medio = round(cos(atan($energia_reativa_media/$energia_ativa_media)), 3);
 }
 
+
+
 $average_trepass = average_trepass_percentage($all_demanda_medida_p, $en_inputs['demanda_sp']);
 $multa_total = multa_periodo($all_demanda_medida_p, $en_inputs['demanda_sp'], $tarifa_ultrapassagem, 0.05);
 

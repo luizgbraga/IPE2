@@ -59,11 +59,11 @@ if(is_post()) {
 
     if($modalidade === 'verde') {
         if(empty($data_err) && empty($consumo_p_err) && empty($demanda_medida_p_err) && empty($energia_reativa_err) && empty($energia_ativa_err)) {
-            Data::add_input($_SESSION['id'], $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_p, $energia_ativa, $energia_reativa, 0);
+            Data::add_input($_SESSION['id'], $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_p, $energia_reativa, $energia_ativa, 0);
         }
     } else {
         if(empty($data_err) && empty($consumo_p_err) && empty($demanda_medida_p_err) && empty($demanda_medida_fp_err) && empty($energia_reativa_err) && empty($energia_ativa_err)) {
-            Data::add_input($_SESSION['id'], $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_fp, $energia_ativa, $energia_reativa, 0);
+            Data::add_input($_SESSION['id'], $data, $consumo_p, $consumo_fp, $demanda_medida_p, $demanda_medida_fp, $energia_reativa, $energia_ativa, 0);
             echo $data;
         }
     }
