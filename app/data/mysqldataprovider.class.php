@@ -44,6 +44,22 @@ class MySqlDataProvider extends DataProvider {
         return $oms[0];
     }
 
+    // retorna o usuário provido de certa sigla em um id
+    public function get_id_sigla($sigla) {
+        $result = $this->query(
+            'SELECT * FROM users WHERE sigla = :sigla',
+            [':sigla' => $sigla]
+        );
+    
+        $ids = [];
+
+        foreach($result as $row) {
+            $ids = [...$ids, $row['id']];
+        }
+    
+        return $ids[0];
+    }
+
     // atualiza um usuário com dados secundários
     public function update_secundary($id, $efetivo, $metragem, $possui_subordinados, $possui_gerdistr) {
         $this->execute(
@@ -151,6 +167,20 @@ class MySqlDataProvider extends DataProvider {
         return $om;
     }
 
+    // retorna se é master
+    public function get_master($id) {
+        $result = $this->query(
+            'SELECT * FROM users WHERE id = :id',
+            [':id' => $id]
+        );
+
+        foreach($result as $row) {
+            $master = $row['master'];
+        }
+
+        return $master;
+    }
+
     // retorna uma array com os inputs de um determinado id
     public function get_inputs($id) {
         $result = $this->query(
@@ -197,6 +227,20 @@ class MySqlDataProvider extends DataProvider {
     
     // adiciona um usuário no banco de dados
     public function add_user($login, $senha, $nome, $sigla) {
+        $users = $this->get_users();
+        $counter = 0;
+        foreach($users as $user) {
+            if($user->sigla === $sigla) {
+                $counter++;
+            }
+        }
+
+        if($counter !== 0) {
+            $master = 0;
+        } else {
+            $master = 1;
+        }
+
         $sql = "INSERT INTO users SET 
         login = :login, 
         senha = :senha,
@@ -217,7 +261,7 @@ class MySqlDataProvider extends DataProvider {
         subordinados = '{}',
         inputs = '{}',
         mensagens = '{}',
-        master = 0
+        master = $master
         ";
 
         $this->execute(

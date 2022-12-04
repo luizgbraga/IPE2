@@ -25,6 +25,8 @@ if($counter === 0) {
 
     <div class="actions-nav column">
 
+    <?php if($_SESSION['master'] === 1) { ?>
+
         <div>
 
             <div class="nav-item row <?php if($home_nav === true) {
@@ -115,5 +117,72 @@ if($counter === 0) {
         </div>
 
     </div>
+
+    <? } else { ?>
+
+        <div>
+
+            <div class="nav-item row <?php if($home_nav === true) {
+                echo 'colored-nav-item';
+            } ?>">
+                <img class='icon-nav' src='assets/home.png' width="20" height="20">
+                <a href='welcome.php'>
+                    <p class="action-nav-text">Início</p>
+                </a>
+            </div>
+
+            <div class='nav-item row'>
+                <img class='icon-nav' src='assets/add-input.png' width="20" height="20">
+                <a href='#' id='open-modal'>
+                    <p class="action-nav-text">Novo Input</p>
+                </a>
+            </div>
+
+            <div class="nav-item row <?php if($gerenciar_nav === true) {
+                echo 'colored-nav-item';
+            } ?>">
+                <img class='icon-nav' src='assets/manage.png' width="20" height="20">
+                <a href='gerenciar.php'>
+                    <p class="action-nav-text">Gerenciar Inputs</p>
+                </a>
+            </div>
+
+
+            <!---
+
+            <div class="nav-item row <?php if($compare_nav === true) {
+                echo 'colored-nav-item';
+            } ?>">
+                <img class='icon-nav' src='assets/compare.png' width="20" height="20">
+                <a href='compare.php'>
+                    <p class="action-nav-text">Comparação</p>
+                </a>
+            </div>
+            -->
+
+            <div class="nav-item row <?php if($profile_nav === true) {
+                echo 'colored-nav-item';
+            } ?>">
+                <img class='icon-nav' src='assets/user.png' width="20" height="20">
+                <a href='profile.php'>
+                    <p class="action-nav-text">Perfil</p>
+                </a>
+                <?php if($warning) {
+                    echo "<img class='warning-nav' src='assets/warning.png' width='20' height='20'>";
+                } ?>
+            </div>
+
+        </div>
+
+        <div class='nav-item row'>
+            <img class='icon-nav' src='assets/setting.png' width="20" height="20">
+            <a href=''>
+                <p class="action-nav-text">Configurações</p>
+            </a>
+        </div>
+
+    </div>
+
+    <?php } ?>
 
 </nav>

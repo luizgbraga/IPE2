@@ -92,6 +92,8 @@
 
         </div>
 
+        <?php if($_SESSION['master'] === 1) { ?>
+
         <div class='row'>
 
           <div class="chart-consumo">
@@ -239,13 +241,14 @@
 
             </div>
 
+            <?php } ?>
+
           </div> 
         
         </section>
       </div>
 
-      <?php include 'modal.view.php'; 
-      ?>
+      <?php include 'modal.view.php'; ?>
 
     </div>
 

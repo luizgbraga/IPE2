@@ -18,6 +18,14 @@ class Data {
         return self::$ds->get_user($id);
     }
 
+    static public function get_master($id) {
+        return self::$ds->get_master($id);
+    }
+
+    static public function get_id_sigla($sigla) {
+        return self::$ds->get_id_sigla($sigla);
+    }
+
     static public function update_secundary($id, $efetivo, $metragem, $possui_subordinados, $possui_gerdistr) {
         return self::$ds->update_secundary($id, $efetivo, $metragem, $possui_subordinados, $possui_gerdistr);
     }

@@ -11,7 +11,11 @@ ensure_user_is_authenticated();
 $en_inputs = Data::get_energetic($_SESSION['id']);
 $modalidade = $en_inputs['modalidade'];
 
-$user_inputs = (array) Data::get_inputs($_SESSION['id']);
+if($_SESSION['master'] == 1) {
+  $user_inputs = (array) Data::get_inputs($_SESSION['id']);
+} else {
+  $user_inputs = (array) Data::get_inputs($_SESSION['associate-id']);
+}
 
 if(is_post()) {
 
@@ -23,7 +27,11 @@ if(is_post()) {
     $energia_ativa = trim($_POST['energia-ativa']);
     $energia_reativa = trim($_POST['energia-reativa']);
 
-    Data::update_input($_SESSION['id'], $key, $data, $consumo_p, $consumo_fp, $demanda_medida, $demanda_medida, $energia_reativa, $energia_ativa, $ger_distribuida);
+    if($_SESSION['master'] == 1) {
+      Data::update_input($_SESSION['id'], $key, $data, $consumo_p, $consumo_fp, $demanda_medida, $demanda_medida, $energia_reativa, $energia_ativa, $ger_distribuida);
+    } else {
+      Data::update_input($_SESSION['associate-id'], $key, $data, $consumo_p, $consumo_fp, $demanda_medida, $demanda_medida, $energia_reativa, $energia_ativa, $ger_distribuida);
+    }
     redirect('gerenciar.php');
 
   }

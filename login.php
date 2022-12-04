@@ -32,7 +32,17 @@ if(is_post()){
             $_SESSION['password'] = $password; 
             $_SESSION['id'] = Data::get_id($_SESSION['username'], $_SESSION['password']);       
             $_SESSION['nome'] = Data::get_name($_SESSION['id'])['nome'];         
-            $_SESSION['sigla'] = Data::get_name($_SESSION['id'])['sigla'];       
+            $_SESSION['sigla'] = Data::get_name($_SESSION['id'])['sigla']; 
+            $_SESSION['master'] = Data::get_master($_SESSION['id']); 
+            if($_SESSION['master'] === 0) {
+                $associate_id = Data::get_id_sigla($_SESSION['sigla']);
+                $_SESSION['associate-id'] = $associate_id;
+                $sec_inputs = Data::get_secundary($associate_id);
+                $en_inputs = Data::get_energetic($associate_id);
+                Data::update_secundary($_SESSION['id'], $sec_inputs['efetivo'], $sec_inputs['metragem'], $sec_inputs['possui_subordinados'], $sec_inputs['possui_gerdistr']);
+                Data::update_energetic($_SESSION['id'], $en_inputs['concessionaria'], $en_inputs['grupo'], $en_inputs['subgrupo'], 
+                $en_inputs['modalidade'], $en_inputs['demanda_up'], $en_inputs['demanda_ufp'], $en_inputs['demanda_sp'], $en_inputs['demanda_sfp']);
+            }   
             redirect('welcome.php');
         } else {
             $login_err = 'Nome de usuário ou senha inválidos';

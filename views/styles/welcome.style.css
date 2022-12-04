@@ -10,13 +10,14 @@ section {
 .title-profile {
     font-size: 18px;
     letter-spacing: 1px;
-    margin-top: 0px
+    margin-top: 0px;
+    margin-bottom: 3px;
 }
 
 .energetic-profile {
     width: 1156px;
-    height: 160px;
-    margin: 20px 0px 10px 36px;
+    height: 142px;
+    margin: 18px 0px 10px 36px;
     background-color: var(--light-grey);
     padding: 16px;
     border-radius: 10px;
@@ -60,15 +61,15 @@ canvas {
 
 .title-chart {
     font-size: 24px;
-    margin: 0px 0px 8px 0px;
+    margin: 0px 0px 4px 0px;
 }
 
 .demanda-infos {
-    margin-top: 52px
+    margin-top: 46px
 }
 
 .consumo-infos {
-    margin-top: 42px
+    margin-top: 36px
 }
 
 .yellow-warning-img {

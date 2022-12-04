@@ -12,8 +12,8 @@ require_once("app/app.php");
 require('app/data/classes/charts.class.php');
 
 $user_inputs = (array) Data::get_inputs($_SESSION['id']);
-$sec_inputs = Data::get_secundary($_SESSION['id']);
-$en_inputs = Data::get_energetic($_SESSION['id']);
+$sec_inputs = Data::get_secundary($_SESSION['id']);$en_inputs = Data::get_energetic($_SESSION['id']);
+
 
 $modalidade = $en_inputs['modalidade'];
 
