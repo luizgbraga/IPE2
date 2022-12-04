@@ -66,6 +66,10 @@ if($modalidade === 'verde') {
     $optimal_demanda = 0;
     $optimal_demanda_s = 0;
     $optimal_demanda_u = 0;
+    $optimal_demanda_seco_p = 0;
+    $optimal_demanda_umido_p = 0;
+    $optimal_demanda_seco_fp = 0;
+    $optimal_demanda_umido_fp = 0;
 }
 
 $sum_consumo_p = array_sum($all_consumo_p);
