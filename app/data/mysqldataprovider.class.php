@@ -454,11 +454,22 @@ class MySqlDataProvider extends DataProvider {
     
     // conecta com a base de dados
     private function connect() {
+        /*
         try {
             return new PDO($this->source, CONFIG['db_user'], CONFIG['db_password']);
         } catch(PDOException $e) {
             return null;
         }
+        */
+        $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $cleardb_server = $cleardb_url["host"];
+        $cleardb_username = $cleardb_url["user"];
+        $cleardb_password = $cleardb_url["pass"];
+        $cleardb_db = substr($cleardb_url["path"],1);
+        $active_group = 'default';
+        $query_builder = TRUE;
+        // Connect to DB
+        mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
     }
 }
 
