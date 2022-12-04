@@ -94,33 +94,41 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-        <?php if(!$datas) { ?>
+        <?php if(!$datas_sub) { ?>
       const labels = [];
     <?php } else { ?>
       const labels = <?php echo json_encode($datas_sub) ?>;
     <?php } ?>
 
-    <?php if(!$all_consumo_p) { ?>
+    <?php if(!$all_consumo_p_sub) { ?>
       const consumoPJSON = [];
     <?php } else { ?>
       const consumoPJSON = <?php echo json_encode($all_consumo_p_sub) ?>;
     <?php } ?>
 
-    <?php if(!$all_consumo_fp) { ?>
+    <?php if(!$all_consumo_fp_sub) { ?>
       const consumoFPJSON = [];
     <?php } else { ?>
       const consumoFPJSON = <?php echo json_encode($all_consumo_fp_sub) ?>;
     <?php } ?>
 
-    <?php if(!$all_demanda_medida_p) { ?>
+    <?php if(!$all_demanda_medida_p_sub) { ?>
         const demandaJSON = [];
       <?php } else { ?>
-        const demandaJSON = <?php echo json_encode($all_demanda_medida_p) ?>;
+        const demandaJSON = <?php echo json_encode($all_demanda_medida_p_sub) ?>;
       <?php } ?>
 
-      const modalidade = 'verde'
+      <?php if(!$en_inputs) { ?>
+        const demandaContratadaU = 0;
+        const demandaContratadaS = 0
+      <?php } else { ?>
+        const demandaContratadaU = <?php echo $en_inputs['demanda_up'] ?>;
+        const demandaContratadaS = <?php echo $en_inputs['demanda_sp'] ?>;
+      <?php } ?>
 
-    <?php include 'scripts/data.js'; ?>
+      const modalidade = 'verde';
+
+    <?php include 'scripts/dataSub.js'; ?>
 
     <?php if($en_inputs['modalidade'] === 'verde') {
       include 'scripts/modal.js';

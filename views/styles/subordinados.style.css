@@ -40,7 +40,7 @@
 
 .chart-test {
     width: 520px;
-    height: 400px;
+    height: 300px;
     margin: 30px 0px 0px 36px;
 }
 
@@ -54,4 +54,10 @@
 
 .mensagem-text {
     font-size: 20px;
+}
+
+canvas {
+    background-color: var(--light-grey);
+    padding: 12px;
+    border-radius: 10px;
 }
