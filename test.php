@@ -1,61 +1,5 @@
 <?php
 
-// Funções para facilitar ações da linguagem
-
-function redirect($url) {
-    header("Location: $url");
-    die();
-}
-
-function is_post() {
-    return $_SERVER['REQUEST_METHOD'] === 'POST';
-}
-
-function is_get() {
-    return $_SERVER['REQUEST_METHOD'] === 'GET';
-}
-
-function is_user_authenticated() {
-    return isset($_SESSION['loggedin']);
-}
-
-function ensure_user_is_authenticated() {
-    if (!is_user_authenticated()) {
-      redirect('login.php');
-    }
-}
-
-function value($el) {
-    if(!empty($el) || $el === 0) {
-        return $el;
-    } else {
-        return 'Não há';
-    }
-}
-
-function translator($el) {
-    if($el) {
-        return 'Sim';
-    } else {
-        return 'Não';
-    }
-}
-
-function detranslator($el) {
-    if($el) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
-function format_data($data) {
-    $months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-    return $months[intval(substr($data, -2)) - 1] . '/' . substr($data, 0, 4);
-}
-
-// Funções para cálculos energéticos
-
 function conta_mensal_demanda($demanda_medida, $demanda_contratada_periodo, $tarifa, $tarifa_ultrapassagem, $tol) {
     $conta_mensal = 0;
     $conta_mensal += max($demanda_medida, $demanda_contratada_periodo) * $tarifa;
@@ -80,17 +24,6 @@ function conta_periodo_demanda($demandas_periodo, $demanda_contratada_periodo, $
     }
     return $conta_periodo;
 }
-
-function multa_periodo($demandas_periodo, $demanda_contratada_periodo, $tarifa_ultrapassagem, $tol) {
-    $multa_periodo = 0;
-    foreach($demandas_periodo as $demanda_medida) {
-        if($demanda_medida > (1 + $tol) * $demanda_contratada_periodo) {
-            $multa_periodo += abs($demanda_medida - $demanda_contratada_periodo) * $tarifa_ultrapassagem;
-        }
-    }
-    return $multa_periodo;
-}
-
 
 function conta_periodo_demanda_pfp($demandas_periodo_pfp, $demanda_contratada_periodo_pfp, $tarifa_pfp, $tarifa_ultrapassagem_pfp, $tol) {
     $conta_periodo = 0;
@@ -123,9 +56,6 @@ function conta_anual_demanda_pfp($demandas_ano_pfp, $demanda_contratada_seco_pfp
 }
 
 function optimal_demandas_contratadas($demandas_ano, $tarifa, $tarifa_ultrapassagem, $tol, $inc) {
-    if(count($demandas_ano) !== 12) {
-        return [0, 0];
-    } 
     $demandas_seco = array_slice($demandas_ano, 4, 11);
     $demandas_umido = array_merge(array_slice($demandas_ano, 0, 4), [$demandas_ano[11]]);
     $demandas_contratadas_seco_teste = range(min($demandas_seco), max($demandas_seco), $inc);
@@ -147,9 +77,6 @@ function optimal_demandas_contratadas($demandas_ano, $tarifa, $tarifa_ultrapassa
 }
 
 function optimal_demandas_contratadas_pfp($demandas_ano_pfp, $tarifa_pfp, $tarifa_ultrapassagem_pfp, $tol, $inc) {
-    if(count($demandas_ano_pfp[0]) !== 12 || count($demandas_ano_pfp[1]) !== 12) {
-        return [[0, 0], [0, 0]];
-    } 
     $demandas_p_seco = array_slice($demandas_ano_pfp[0], 4, 11);
     $demandas_fp_seco = array_slice($demandas_ano_pfp[1], 4, 11); 
     $demandas_p_umido = array_merge(array_slice($demandas_ano_pfp[0], 0, 4), [$demandas_ano_pfp[0][11]]);
@@ -211,27 +138,59 @@ function economia_pfp($demandas_ano_pfp, $demanda_contratada_seco_pfp, $demanda_
     return [$economia, $economia_percentual];
 }
 
-function avg($arr) {
-    if(count($arr) === 0) {
+
+function multa($demanda_medida, $demanda_contratada, $tol) {
+    $dist = abs($demanda_contratada - $demanda_medida); 
+    if($dist < (1 + $tol) * $demanda_contratada && $dist > (1 - $tol) * $demanda_contratada) {
         return 0;
+    } else {
+        return $dist;
     }
-    $avg = 0;
-    foreach($arr as $el) {
-        $avg += $el;
-    }
-    $avg /= count($arr);
-    return $avg;
 }
 
-function average_trepass_percentage($demandas, $demanda_contratada) {
-    $percentages = [];
+function multa_anual($demandas, $demanda_contratada, $tol) {
+    $multa = 0;
     foreach($demandas as $demanda) {
-        if($demanda > $demanda_contratada) {
-            $p = abs($demanda_contratada - $demanda)/$demanda_contratada;
-            $percentages = [...$percentages, $p];
-        }
+        $multa += multa($demanda, $demanda_contratada, $tol);
     }
-    return round(100 * avg($percentages), 1);
+
+    return $multa;
 }
 
-?>
+function optimal_demanda($demandas, $tol, $inc) {
+    $test_values = range(min($demandas), max($demandas), $inc);
+    $multas = [];
+    foreach($test_values as $test_value) {
+        $multas = [...$multas, multa_anual($demandas, $test_value, $tol)];
+    }
+
+    $min_multa = min($multas);
+    return $test_values[array_search($min_multa, $multas)];
+}
+
+/*
+echo conta_mensal_demanda(1200, 1000, 30, 15, 0.01);
+echo '</br>';
+echo conta_mensal_demanda_pfp([1000, 200], [800, 50], [40, 10], [30, 15], 0.01);
+echo '</br>';
+echo conta_periodo_demanda([1000, 700, 1200, 800], 1000, 30, 20, 0.05);
+echo '</br>';
+echo conta_periodo_demanda_pfp([[1000, 200], [800, 300], [1200, 400]], [800, 200], [30, 15], [40, 10], 0.05);
+echo '</br>';
+echo conta_anual_demanda([1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], 1000, 1400, 30, 10, 0.05);
+echo '</br>';
+echo conta_anual_demanda_pfp([[1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], [600, 200, 500, 900, 800, 400, 100, 300, 130, 400, 900, 1000]], [1000, 300], [900, 200], [40, 10], [10, 5], 0.05);
+echo '</br>';
+echo optimal_demandas_contratadas([1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], 30, 10, 0.05, 1)[0];
+echo '</br>';
+echo optimal_demandas_contratadas([1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], 30, 10, 0.05, 1)[1];
+echo '</br>';
+print_r(optimal_demandas_contratadas_pfp([[1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], [600, 200, 500, 900, 800, 400, 100, 300, 130, 400, 900, 1000]], [40, 10], [10, 5], 0.05, 1));
+echo '</br>';
+print_r(economia([1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], 1000, 1400, 30, 10, 0.05, 1));
+echo '</br>';
+print_r(economia([1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], 1000, 1400, 30, 10, 0.05, 1));
+echo '</br>';
+print_r(economia_pfp([[1000, 1200, 1500, 900, 800, 1000, 1100, 3000, 1300, 400, 900, 1000], [600, 200, 500, 900, 800, 400, 100, 300, 130, 400, 900, 1000]], [1000, 300], [900, 200], [40, 10], [10, 5], 0.05, 1));
+echo '</br>';
+*/
