@@ -21,8 +21,11 @@ Além disso, Um dos propóstos deste software foi integrar as OMs cadastradas em
 
 ## Printscreens
 
-<p float="left">
-  <img src="https://github.com/luizgbraga/IPE2/blob/main/login-page.png?raw=true" width="450">
-  <img src="https://github.com/luizgbraga/IPE2/blob/main/home-page.png?raw=true" width="450">
-</p>
+### Página de Login
 
+<img src="https://github.com/luizgbraga/IPE2/blob/main/login-page.png?raw=true">
+
+
+### Dashboard (Home)
+
+<img src="https://github.com/luizgbraga/IPE2/blob/main/home-page.png?raw=true" width="450">
