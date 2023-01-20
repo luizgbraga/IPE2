@@ -45,7 +45,7 @@ if(empty($_GET['editable'])) {
                     <div class='primary-info column'>
                         <div class='title-box row'>
                             <h3>Informações da conta</h3>
-                            <img src="assets/edit.png" alt="edit-icon" width="22" height="22" />
+                            <img src="../assets/edit.png" alt="edit-icon" width="22" height="22" />
                         </div>
                         <div class='infos'>
                             <p class='item'><strong>Nome:</strong> <?= $_SESSION["nome"] ?></p>
@@ -59,7 +59,7 @@ if(empty($_GET['editable'])) {
                         <div class='title-box row'>
                             <h3>Informações da OM</h3>
                             <a id="edit" href="profile.php?editable=1">
-                              <img src="assets/edit.png" alt="edit-icon" width="22" height="22" />
+                              <img src="../assets/edit.png" alt="edit-icon" width="22" height="22" />
                             </a>
                         </div>
 
@@ -68,13 +68,13 @@ if(empty($_GET['editable'])) {
                               <div class='row'>
                                 <p class='item'><strong>Efetivo: </strong><?php echo value($sec['efetivo']) ?></p>
                                 <?php if($profile_warnings['efetivo'] == 'Não há') {
-                                  echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                  echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                                 } ?>
                               </div>
                               <div class='row'>
                                 <p class='item'><strong>Metragem: </strong><?php echo value($sec['metragem']) ?></p>
                                 <?php if($profile_warnings['metragem'] == 'Não há') {
-                                  echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                  echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                                 } ?>
                               </div>
                           </div>
@@ -103,7 +103,7 @@ if(empty($_GET['editable'])) {
                     <div class='title-box row'>
                             <h3>Perfil Energético da OM</h3>
                             <a id="edit" href="profile.php?editable=2">
-                              <img src="assets/edit.png" alt="edit-icon" width="22" height="22" />
+                              <img src="../assets/edit.png" alt="edit-icon" width="22" height="22" />
                             </a>
                         </div>
 
@@ -113,25 +113,25 @@ if(empty($_GET['editable'])) {
                             <div class='row'>
                               <p class='item'><strong>Concessionária:</strong> <?= value($en['concessionaria']) ?></p>
                               <?php if($energetic_warnings['concessionaria'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
                             <div class='row'>
                               <p class='item'><strong>Grupo:</strong> <?= value($en['grupo']) ?></p>
                               <?php if($energetic_warnings['grupo'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
                             <div class='row'>
                               <p class='item'><strong>Subgrupo:</strong> <?= value($en['subgrupo']) ?></p>
                               <?php if($energetic_warnings['subgrupo'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
                             <div class='row'>
                               <p class='item'><strong>Modalidade tarifária:</strong> <?= value($en['modalidade']) ?></p>
                               <?php if($energetic_warnings['modalidade'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
 
@@ -139,25 +139,25 @@ if(empty($_GET['editable'])) {
                               <div class='row'>
                               <p class='item'><strong>Demanda contratada (seco ponta):</strong> <?= value($en['demanda_sp']) ?></p>
                               <?php if($energetic_warnings['demanda_sp'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
                             <div class='row'>
                               <p class='item'><strong>Demanda contratada (úmido ponta):</strong> <?= value($en['demanda_up']) ?></p>
                               <?php if($energetic_warnings['demanda_up'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>                            
                             <div class='row'>
                               <p class='item'><strong>Demanda contratada (seco fora):</strong> <?= value($en['demanda_sfp']) ?></p>
                               <?php if($energetic_warnings['demanda_sp'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
                             <div class='row'>
                               <p class='item'><strong>Demanda contratada (úmido fora):</strong> <?= value($en['demanda_ufp']) ?></p>
                               <?php if($energetic_warnings['demanda_up'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
 
@@ -166,13 +166,13 @@ if(empty($_GET['editable'])) {
                             <div class='row'>
                               <p class='item'><strong>Demanda contratada (seco):</strong> <?= value($en['demanda_sp']) ?></p>
                               <?php if($energetic_warnings['demanda_sp'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
                             <div class='row'>
                               <p class='item'><strong>Demanda contratada (úmido):</strong> <?= value($en['demanda_up']) ?></p>
                               <?php if($energetic_warnings['demanda_up'] == 'Não há') {
-                                    echo "<img class='warning-profile' src='assets/warning.png' width='16' height='16'>";
+                                    echo "<img class='warning-profile' src='../assets/warning.png' width='16' height='16'>";
                               } ?>
                             </div>
 

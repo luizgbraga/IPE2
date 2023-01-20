@@ -3,12 +3,12 @@
 // inicialize a sessão
 session_start();
  
-require_once('app/app.php');
+require_once("../app/app.php");
 
 $username = $password = '';
 $username_err = $password_err = $login_err = '';
  
-if(is_post()){
+if(is_post()) {
 
     if(empty(trim($_POST['username']))) {
         $username_err = 'Insira o nome de usuário';
@@ -50,6 +50,6 @@ if(is_post()){
     }
 }
 
-include('./views/login.view.php');
+include('../views/login.view.php');
 
 ?>

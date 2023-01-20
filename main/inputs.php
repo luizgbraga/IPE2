@@ -1,6 +1,6 @@
 <?php
 
-require_once('app/app.php');
+require_once("../app/app.php");
 
 $en = Data::get_energetic($_SESSION['id']);
 $modalidade = $en['modalidade'];
@@ -75,7 +75,7 @@ if(is_post()) {
     redirect('welcome.php');
 }
 
-include('./views/inputs.view.php');
+include('../views/inputs.view.php');
 
 ?>
 

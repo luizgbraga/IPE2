@@ -40,7 +40,7 @@
                         <div class='form-group'>
                             <input type='text' name='search' class='search-input' placeholder='Procure uma OM' value='<?php echo $search; ?>'>
                         </div>    
-                        <img class='search-icon' src='assets/search.png' alt='search-icon' width='22' height='22' />
+                        <img class='search-icon' src='../assets/search.png' alt='search-icon' width='22' height='22' />
                         <div class='form-group'>
                             <input type='submit' class='search-btn' value='Pesquisar'>
                         </div>

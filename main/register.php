@@ -1,6 +1,6 @@
 <?php
 
-require_once('app/app.php');
+require_once("../app/app.php");
  
 $nome = $sigla = $login = $senha = $confirm_senha = '';
 $nome_err = $sigla_err = $login_err = $senha_err = $confirm_senha_err = '';
@@ -46,7 +46,7 @@ if(is_post()) {
     }
 }
 
-include('./views/register.view.php');
+include('../views/register.view.php');
 
 ?>
  

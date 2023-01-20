@@ -3,7 +3,7 @@
 // inicialize a sesssão
 session_start();
  
-require_once("app/app.php");
+require_once("../app/app.php");
 
 // verifique se está logado; senão, redirecione para o login
 ensure_user_is_authenticated();
@@ -17,6 +17,6 @@ if(isset($_GET['id'])) {
     redirect('mensagens.php');
 }
 
-include('./views/mensagens.view.php');
+include('../views/mensagens.view.php');
 
 ?>

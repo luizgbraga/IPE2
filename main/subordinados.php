@@ -3,7 +3,7 @@
 // inicialize a sessão
 session_start();
 
-require_once('app/app.php');
+require_once("../app/app.php");
  
 // verifique se está logado; senão, redirecione para o login
 ensure_user_is_authenticated();
@@ -48,6 +48,6 @@ if(count($datas_sub) > 12) {
     $all_energia_reativa_sub = array_slice($all_energia_reativa_sub, -12, 12);
 }
 
-include('./views/subordinados.view.php');
+include('../views/subordinados.view.php');
 
 ?>

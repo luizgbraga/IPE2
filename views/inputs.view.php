@@ -23,7 +23,7 @@
                         <input type='number' name='consumo-p' placeholder='kWh' class='left-modal-input'>
                     </div>
                     <div class='icon-modal center-content'>
-                        <img src='assets/plugue.png' alt='plugue-icon' width='22' height='22' />
+                        <img src='../assets/plugue.png' alt='plugue-icon' width='22' height='22' />
                     </div>
                 </div>
                 <span class='invalid-feedback'></span>
@@ -37,7 +37,7 @@
                         <input type='number' name='consumo-fp' placeholder='kWh' class='left-modal-input'>
                     </div>
                     <div class='icon-modal center-content'>
-                        <img src='assets/plugue.png' alt='plugue-icon' width='22' height='22' />
+                        <img src='../assets/plugue.png' alt='plugue-icon' width='22' height='22' />
                     </div>
                 </div>
                 <span class='invalid-feedback'></span>
@@ -55,7 +55,7 @@
                         <input type='number' name='demanda-medida-p' placeholder='kWh' class='right-modal-input'>
                     </div>
                     <div class='icon-modal center-content'>
-                        <img src='assets/medidor.png' alt='medidor-icon' width='22' height='22' />
+                        <img src='../assets/medidor.png' alt='medidor-icon' width='22' height='22' />
                     </div>
                 </div>
                 <span class='invalid-feedback'></span>
@@ -73,7 +73,7 @@
                             <input type='number' name='demanda-medida-p' placeholder='kWh' class='left-modal-input'>
                         </div>
                         <div class='icon-modal center-content'>
-                            <img src='assets/medidor.png' alt='user-icon' width='22' height='22' />
+                            <img src='../assets/medidor.png' alt='user-icon' width='22' height='22' />
                         </div>
                     </div>
                     <span class='invalid-feedback'></span>
@@ -86,7 +86,7 @@
                             <input type='number' name='demanda-medida-fp' placeholder='kWh' class='right-modal-input'>
                         </div>
                         <div class='icon-modal center-content'>
-                            <img src='assets/medidor.png' alt='user-icon' width='22' height='22' />
+                            <img src='../assets/medidor.png' alt='user-icon' width='22' height='22' />
                         </div>
                     </div>
                     <span class='invalid-feedback'></span>
@@ -106,7 +106,7 @@
                         <input type='number' name='energia-reativa' placeholder='kWh' class='left-modal-input'>
                     </div>
                     <div class='icon-modal center-content'>
-                        <img src='assets/energy.png' alt='user-icon' width='22' height='22' />
+                        <img src='../assets/energy.png' alt='user-icon' width='22' height='22' />
                     </div>
                 </div>
                 <span class='invalid-feedback'></span>
@@ -119,7 +119,7 @@
                         <input type='number' name='energia-ativa' placeholder='kWh' class='right-modal-input'>
                     </div>
                     <div class='icon-modal center-content'>
-                        <img src='assets/energy.png' alt='user-icon' width='22' height='22' />
+                        <img src='../assets/energy.png' alt='user-icon' width='22' height='22' />
                     </div>
                 </div>
                 <span class='invalid-feedback'></span>

@@ -3,7 +3,7 @@
 // inicialize a sessão
 session_start();
 
-require_once('app/app.php');
+require_once("../app/app.php");
  
 // verifique se está logado; senão, redirecione para o login
 ensure_user_is_authenticated();
@@ -97,6 +97,6 @@ if(is_post()) {
 $profile_warnings = array_map('value', $sec);
 $energetic_warnings = array_map('value', $en);
 
-include('./views/profile.view.php');
+include('../views/profile.view.php');
 
 ?>

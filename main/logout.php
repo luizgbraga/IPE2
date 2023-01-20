@@ -3,7 +3,7 @@
 // inicialize a sessão
 session_start();
 
-require_once("app/app.php");
+require_once("../app/app.php");
  
 // remova todas as variáveis de sessão
 $_SESSION = array();

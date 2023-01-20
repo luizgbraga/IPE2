@@ -4,12 +4,12 @@
 
 session_start();
 
-require_once("app/app.php");
+require_once("../app/app.php");
  
 // verifique se está logado; senão, redirecione para o login
+ensure_user_is_authenticated();
 
-
-require('app/data/classes/charts.class.php');
+require('../app/data/classes/charts.class.php');
 
 $user_inputs = (array) Data::get_inputs($_SESSION['id']);
 $sec_inputs = Data::get_secundary($_SESSION['id']);$en_inputs = Data::get_energetic($_SESSION['id']);
@@ -113,11 +113,9 @@ if($energia_ativa_media == 0 || $energia_reativa_media == 0) {
     $fp_medio = round(cos(atan($energia_reativa_media/$energia_ativa_media)), 3);
 }
 
-
-
 $average_trepass = average_trepass_percentage($all_demanda_medida_p, $en_inputs['demanda_sp']);
 $multa_total = multa_periodo($all_demanda_medida_p, $en_inputs['demanda_sp'], $tarifa_ultrapassagem, 0.05);
 
-include('./views/welcome.view.php');
+include('../views/welcome.view.php');
 
 ?>

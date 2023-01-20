@@ -13,7 +13,7 @@
         </style>
 
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
-        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link rel="icon" type="image/png" href="../assets/favicon.png">
     
     </head>
 
@@ -31,7 +31,7 @@
                     <div>
                         <div class='row'>
                             <div class='icon center-content <?php echo (!empty($username_err)) ? 'is-invalid-icon' : ''; ?>'>
-                                <img src='assets/user.png' alt='user-icon' width='24' height='24' />
+                                <img src='../assets/user.png' alt='user-icon' width='24' height='24' />
                             </div>
                             <input type='text' name='username' placeholder='Login' class='writable-input <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>' value='<?php echo $username; ?>'>
                         </div>
@@ -41,7 +41,7 @@
                     <div class='password-input'>
                         <div class='row'>
                             <div class='icon center-content <?php echo (!empty($password_err)) ? 'is-invalid-icon' : ''; ?>'>
-                                <img src='assets/lock.png' alt='lock-icon' width='24' height='24' />
+                                <img src='../assets/lock.png' alt='lock-icon' width='24' height='24' />
                             </div>
                             <input type='password' name='password' placeholder='Senha' class='writable-input <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>'>
                         </div>
@@ -56,7 +56,7 @@
                     <div>
                         <div class='row'>
                             <input type='submit' class='btn' value='Entrar       '>
-                            <img src='assets/next.png' class='next' alt='Next' width='20' height='20' />
+                            <img src='../assets/next.png' class='next' alt='Next' width='20' height='20' />
                         </div>
                     </div>
 
