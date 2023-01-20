@@ -23,7 +23,7 @@ Além disso, Um dos propóstos deste software foi integrar as OMs cadastradas em
 
 ### Página de Login
 
-![Printscreen](https://github.com/luizgbraga/IPE2/blob/main/login-page.png?raw=true)
+![Printscreen](https://github.com/luizgbraga/IPE2/blob/main/login-page.png?raw=true | width=100)
 
 ### Dashboard
 
